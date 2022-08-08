@@ -1,0 +1,37 @@
+* {
+    padding: 0;
+    margin: 5px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/*
+    '~' É utilizado para atributos que tenham PELO MENOS o valor especificado.
+*/
+[meu-atributo~="valor3"] {
+    color: blue;
+}
+/*
+    '|' É utilizado para atributos que tenham traço depois do valor.
+*/
+[meu-atributo|="valor"] {
+    color: darkmagenta;
+}
+/*
+    '^' É utilizado para atributos que começam com o valor.
+*/
+[meu-atributo^="comeco"] {
+    color: darkgreen;
+}
+/*
+    '$' É utilizado para atributos que terminam com o valor.
+*/
+[meu-atributo$="final"] {
+    color: darkslateblue;
+}
+/*
+    '*' É utilizado para atributos que contenham o valor.
+*/
+[meu-atributo*="eio fi"] {
+    color: darkred;
+}

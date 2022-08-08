@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    width: 100%;
+    background-image: url(https://preview.redd.it/c3uhsgo1vx541.jpg?auto=webp&s=a45b583ebf921d3ad1649e77ad05e55226140120);
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+}
+
+#cabecalho {
+    overflow: auto;
+    margin: 1vh auto 0 auto;
+    height: auto;
+    width: 90vw;
+    display: flex;
+    justify-content: space-evenly;
+    border: .1vh solid rgba(0, 0, 0, 0.35);
+    background-color: rgba(0, 0, 0, 0.35);
+    font-family: sans-serif;
+    box-shadow: 0 0 1vh rgba(0, 0, 0, 1);
+    text-shadow: .2vh .2vh .5vh rgba(0, 0, 0, 1);
+}
+#titulo {
+    margin: auto;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 2vmax;
+}
+#travolta {
+    width: 25%;
+}
+#links {
+    margin: auto;
+    font-size: 1.7vmax;
+}
+#links a {
+    transition: all 150ms ease-in-out;
+    text-decoration: none;
+    color: rgba(255, 204, 0, 0.6);
+}
+#links a:hover {
+    color: rgba(255, 255, 255, 1);
+    font-size: 5vmax;
+    text-shadow: 1vh 1vh 1vh rgba(0, 0, 0, 0.75);
+}
+
+#sidebar {
+    overflow: auto;
+    height: auto;
+    width: 94vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    border: .2vh solid rgba(0, 0, 0, 0.75);
+    background-image: url(https://t4.ftcdn.net/jpg/04/04/40/49/360_F_404404954_WGYZtTwswIrXnJl6qVeEFK5UWPFflVB8.jpg);
+    background-size: cover;
+    background-position: top center;
+    box-shadow: 0 0 1vh rgba(0, 0, 0, 1);
+}
+#boneco {
+    margin: auto;
+    width: 25%;
+}
+#lista {
+    margin: auto;
+    display: list-item;
+    justify-content: space-evenly;
+    font-size: 2vmax;
+    list-style-type: upper-roman;
+}
+#lista a {
+    transition: all 150ms ease-in-out;
+    font-size: 2vmax;
+    text-decoration: none;
+    font-family: sans-serif;
+    text-shadow: .1vh .1vh 1vh rgba(0, 0, 0, 1);
+}
+#lista a:link {
+    color: rgba(255, 255, 255, 1);
+}
+#lista a:visited {
+    color: firebrick;
+}
+#lista a:hover {
+    color: rgb(255, 255, 0);
+    font-size: 3.3vmax;
+}
+
+#rodape {
+    overflow: auto;
+    width: 90vw;
+    margin: 0 auto 1vh auto;
+    display: list-item;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.35);
+    border: .1vh solid rgba(0, 0, 0, 0.35);
+    color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 1vh rgba(0, 0, 0, 1);
+}
+
+#frame-video {
+    padding: 2vh;
+    display: flex;
+    justify-content: center;
+}
+#video {
+    height: 240px;
+    width: 420px;
+    border: .3vh solid rgba(255, 255, 255, 0.5);
+}
+
+#frame-fim {
+    display: flex;
+    justify-content: center;
+}
+#final {
+    transition: all 100ms ease-in-out;
+    margin: 3vh;
+    font-family: sans-serif;
+    text-shadow: .3vh .2vh .5vh rgba(0, 0, 0, 1);
+}
+#final:hover {
+    color: rgba(255, 255, 255, 1);
+    font-size: 5vmax;
+}

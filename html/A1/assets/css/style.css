@@ -1,0 +1,21 @@
+#cabecalho {
+    background: aqua;
+}
+span {
+    background: red;
+}
+#rodape {
+    background: rgb(218, 189, 73);
+    font-size: 24px;
+}
+.texto {
+    background: rgb(208, 192, 255);
+    text-transform:uppercase;
+}
+.forte {
+    color: rgb(142, 26, 168);
+}
+.imagem {
+    width: 300px;
+    height: 200px;
+}
