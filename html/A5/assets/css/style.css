@@ -1,0 +1,224 @@
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, .2);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth !important;
+}
+body {
+    display: list-item;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    overflow-x: auto;
+    background-color: rgba(0, 0, 0, .8);
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    font-family: sans-serif;
+}
+#menu a {
+    margin: auto 3vw;
+    text-decoration: none;
+    color: rgba(255, 255, 255, .6);
+    font-size: 3vw;
+    text-shadow: .3vw .3vw .3vw rgba(0, 0, 0, .7);
+    transition: all 100ms ease-in-out;
+}
+#menu a:hover {
+    font-size: 4.6vw;
+    color: rgba(255, 255, 255, .9);
+}
+#menu a:focus {
+    text-shadow: .2vh .1vw 1vw rgba(255, 255, 255, 1);
+    transition: all 100ms ease-in-out;
+}
+#menu li {
+    list-style-type: none;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#pinboard {
+    display: list-item;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+    margin: 5vh auto;
+    width: 96vw;
+    max-width: 1300px;
+    height: 90vh;
+    background-image:
+        radial-gradient(transparent, transparent,rgba(0,0,0, .5) 75%),
+        url("../img/pinboard.jpg");
+    background-size: cover;
+    background-position: left top;
+    border: 2vh solid transparent;
+    border-image-slice: 27 27 27 27;
+    border-image-width: 2vh;
+    border-image-outset: 0;
+    border-image-repeat: round round;
+    border-image-source: url("../img/wooden-frame.jpg");
+    box-shadow: 0 0 1.5vw rgba(0, 0, 0, 1);
+    transition: all 100ms ease-in-out;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5vh;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#foto-perfil {
+    background-image: url("../img/profile-pic.jpeg");
+    background-size: cover;
+    position: relative;
+    margin: 3vw auto;
+    height: 133.33px;
+    width: 100px;
+    box-shadow: .2vw .1vh 1vh rgba(0, 0, 0, .7);
+    transition: all 200ms ease-in-out;
+}
+#foto-perfil:hover {
+    box-shadow: .2vw .1vh 2vh rgba(0, 0, 0, 1);
+}
+#pino-icon {
+    position: absolute;
+    top: -13px;
+    left: 40px;
+    height: 26px;
+    background-image: radial-gradient(rgba(0,0,0,.18)60%, transparent, transparent);
+    transition: all 200ms ease-in-out;
+}
+#pino-icon:hover {
+    height: 46px;
+    left: 30px;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#descricao {
+    height: 60%;
+    border-radius: 1vw;
+    margin: 0 auto;
+    padding: 0vh 1vw 1vw 3vw;
+    opacity: 0.85;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-shadow: 0 0 .4vh rgba(0, 0, 0, 0.3);
+    box-shadow: .2vw .1vh 1vh rgba(0, 0, 0, 0.7);
+    border: solid .1vh rgba(0, 0, 0, .2);
+    transition: all 200ms ease-in-out;
+}
+#descricao:hover {
+    box-shadow: .2vw .1vh 2vh rgba(0, 0, 0, 1);
+}
+#nome-completo {
+    font-size: 3vw;
+}
+#programador {
+    margin-top: 1vh;
+    font-size: 2.6vw;
+}
+#lista-programador {
+    margin: 1vh;
+    font-size: 2.2vw;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#curriculo {
+    border-radius: 1vw;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 0 1vw 0vh 1vw;
+    height: 22vw;
+    max-height: 280px;
+    opacity: .84;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: .2vw .1vh 1vh rgba(0, 0, 0, 0.7);
+    border: solid .1vh rgba(0, 0, 0, .2);
+    transition: all 200ms ease-in-out;
+}
+#curriculo:hover {
+    box-shadow: .2vw .1vh 2vh rgba(0, 0, 0, 1);
+}
+#curriculo legend {
+    font-size: 2.6vw;
+    text-shadow: 0vw 0vh 1vh rgba(255, 255, 255, 0.3);
+}
+#pdf-link {
+    margin: .5vh 1vw 0 1vw;
+}
+#pdf-icon {
+    width: 10vw;
+    max-height: 200px;
+    max-width: 150px;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#sites {
+    display: list-item;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 3vh;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#legenda-links {
+    border-radius: 1vw;
+    display: flex;
+    justify-content: center;
+    padding: 1vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-shadow: 0 0 .4vh rgba(0, 0, 0, 0.7);
+    font-size: medium;
+    border: solid .1vh rgba(0, 0, 0, .2);
+    box-shadow: .2vw .1vh 1vh rgba(0, 0, 0, 0.7);
+    transition: all 200ms ease-in-out;
+}
+#legenda-links legend {
+    text-shadow: 0vw 0vh 1vh rgba(255, 255, 255, 0.3);
+}
+#legenda-links:hover {
+    box-shadow: .2vw .1vh 2vh rgba(0, 0, 0, 1);
+}
+#imagem-links {
+    border-radius: 7vw;
+    height: 30vw;
+    box-shadow: .2vw .3vh 2vh 1vh rgba(0, 0, 0, 0.8);
+    transition: all 200ms ease-in-out;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#legenda-form-tables {
+    border-radius: 1vw;
+    display: flex;
+    justify-content: center;
+    margin: 2vh auto;
+    padding: 1vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-shadow: 0 0 .4vh rgba(0, 0, 0, 0.7);
+    font-size: medium;
+    border: solid .1vh rgba(0, 0, 0, .2);
+    box-shadow: .2vw .1vh 1vh rgba(0, 0, 0, 0.7);
+    transition: all 200ms ease-in-out;
+}
+#legenda-form-tables legend {
+    text-shadow: 0vw 0vh 1vh rgba(255, 255, 255, 0.3);
+}
+#legenda-form-tables:hover {
+    box-shadow: .2vw .1vh 2vh rgba(0, 0, 0, 1);
+}
+#imagem-form-tables {
+    border-radius: 7vw;
+    height: 30vw;
+    box-shadow: .2vw .3vh 2vh 1vh rgba(0, 0, 0, 0.8);
+}
