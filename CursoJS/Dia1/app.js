@@ -13,3 +13,4 @@ let nomeDoMeio;
 nomeDoMeio = 'Sousa'; //Definindo valor após criação de variável
 let sobreNome = 'Blatt';
 console.log('Nome:', nome, ';\nNome do meio:', nomeDoMeio,';\nSobrenome:',sobreNome,'.\n');
+
