@@ -16,7 +16,7 @@ document.body.innerHTML += `A letra '<b>a</b>' aparece por último no índice: <
 const divideNome = nome.split(' ');
 document.body.innerHTML += `Seu nome separado: '<b>${divideNome}</b>';<br/>`;
 
-const sobreNome = divideNome[divideNome.length-1];
+const sobreNome = divideNome[divideNome.length-1];  // Achei conveniente usar 'array' para separar nomes
 const ultimasLetras = sobreNome.slice(-3);
 document.body.innerHTML += `As últimas <b>3</b> letras do seu nome são: '<b>${ultimasLetras}</b>';<br/>`;
 
