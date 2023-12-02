@@ -1,4 +1,4 @@
-let alunos = ['joao', 'maria', 'jose'];
+const alunos = ['joao', 'maria', 'jose'];
 
 const novoAluno = prompt('Adicione um aluno:');
 alunos.push(novoAluno);
