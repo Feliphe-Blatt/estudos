@@ -9,7 +9,7 @@ function addAluno(x, y, z){
             alert(`Bem vindo a nossa turma ${this.nome}!`);
         }  
     };
-    alert(`${this.nome} Adicionado!`);
+    alert(`${aluno.nome} Adicionado!`);
     return aluno;
 }
 
