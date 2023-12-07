@@ -41,7 +41,7 @@ function escopo (){
             else if (genx.checked){
                 temporario = 'Outr@';
             }else {
-                temporario = 'x'
+                temporario = 'x';
             }
             return temporario;
         }
