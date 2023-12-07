@@ -104,20 +104,14 @@ function escopo (){
             const opcao6 = document.getElementById('op6');
 
             nome.innerHTML = setNome(a);
-
             const resultado = a.imc();
-
-            corTabela(resultado, opcao1, opcao2, opcao3, opcao4, opcao5, opcao6);
-
             imc.innerHTML = resultado;
-
             veredito.innerHTML = vereditoTabela(resultado);
-
+            corTabela(resultado, opcao1, opcao2, opcao3, opcao4, opcao5, opcao6);
         }
 
         /////////////////////////////////////// Cria o 'perfil' e mostra resultado
         function addFormulario(a, b, c){
-
             const pessoa = {
                 nome : a,
                 peso : b,
@@ -135,7 +129,7 @@ function escopo (){
         const peso = formulario.querySelector('#peso');
         const altura = formulario.querySelector('#altura');
         
-        formularios.push(addFormulario(nome.value, Number(peso.value), Number(altura.value))); // Adição do perfil criado em 'addFormulario' na lista 'formularios' e mostra resultado com 'resultadoTabela'
+        formularios.push(addFormulario(nome.value, Number(peso.value), Number(altura.value)));
 
         console.log(formularios);
     }
