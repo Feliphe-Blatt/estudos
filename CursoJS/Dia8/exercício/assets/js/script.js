@@ -31,7 +31,7 @@ function escopo (){
             const gen2 = document.getElementById('gen2');
             const genx = document.getElementById('genx');
 
-            let temporario = '';
+            let temporario = 'x';
             if (gen1.checked){
                 temporario = 'Masculino';
             }
@@ -40,8 +40,6 @@ function escopo (){
             }
             else if (genx.checked){
                 temporario = 'Outr@';
-            }else {
-                temporario = 'x';
             }
             return temporario;
         }
@@ -96,6 +94,8 @@ function escopo (){
         contador++;
         console.log(formularios);
     }
+
     formulario.addEventListener('submit', getFormulario);
 }
+
 escopo();

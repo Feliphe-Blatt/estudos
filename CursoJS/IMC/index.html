@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculadora de IMC</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="icon" href="./assets/img/form-icon.png">
+</head>
+
+<body>
+
+  <section class="container">
+
+    <form id="formulario" action="" method="get" target="_blank" autocomplete="off">
+      <header>
+          <h1>Calculadora de IMC:</h1>
+      </header>
+      <fieldset>
+          <legend><b>| Nome |</b></legend>
+          <input type="text" id="nome" placeholder="Seu Nome">
+      </fieldset>
+      <fieldset>
+        <legend><b>| Peso |</b></legend>
+        <input type="text" id="peso" placeholder="x.x kg" required>
+      </fieldset>
+      <fieldset>
+        <legend><b>| Altura |</b></legend>
+        <input type="text" id="altura" placeholder="x.x M" required>
+      </fieldset>
+      <footer id="rodape">
+          <button type="reset"><b>Limpar</b></button>
+          <button type="submit"><b>Calcular</b></button>
+      </footer>
+  </form>
+
+    <table>
+      <caption><b>Tabela IMC</b></caption>
+      <thead>
+        <tr>
+          <th>IMC</th>
+          <th>Resultado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="op1">
+          <td>Menor que <b>18,5</b></td>
+          <td>Abaixo do peso</td>
+        </tr>
+        <tr id="op2">
+          <td>Entre <b>18,5</b> e <b>24,9</b></td>
+          <td>Peso normal</td>
+        </tr>
+        <tr id="op3">
+          <td>Entre <b>24,9</b> e <b>29,9</b></td>
+          <td>Sobrepeso</td>
+        </tr>
+        <tr id="op4">
+          <td>Entre <b>29,9</b> e <b>34,9</b></td>
+          <td>Obesidade grau <b>1</b></td>
+        </tr>
+        <tr id="op5">
+          <td>Entre <b>34,9</b> e <b>39,9</b></td>
+          <td>Obesidade grau <b>2</b></td>
+        </tr>
+        <tr id="op6">
+          <td>Maior que <b>39,9</b></td>
+          <td>Obesidade grau <b>3</b></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Nome: <b id="nomeTabela">(Sem Nome)</b></td>
+        </tr>
+        <tr>
+          <td colspan="2">IMC: <b id="resultadoTabela">(Sem Resultado)</b></td>
+        </tr>
+        <tr>
+          <td colspan="2">Veredito: <b id="ver">(Sem Veredito)</b></td>
+        </tr>
+      </tfoot>
+    </table>
+
+  </section>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
