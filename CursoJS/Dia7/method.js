@@ -23,3 +23,13 @@ alunos.push(addAluno('feliphe', 27, 7));
 alunos[0].bemVindo();
 
 console.log(alunos);
+
+const copiaAlunos = alunos; // Atribui mesmo endereço na memoria, como um novo 'atalho'.
+
+const teste = {...alunos};  // Copia todos os valores para outro valor na memória, implicando na independência das variáveis
+
+alunos.push(addAluno('gepeto', 30, 10));
+
+console.log(copiaAlunos);
+
+console.log(teste);

@@ -1,0 +1,253 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    max-width: 100%;
+    overflow-x: auto;
+    background-image: url(https://preview.redd.it/c3uhsgo1vx541.jpg?auto=webp&s=a45b583ebf921d3ad1649e77ad05e55226140120);
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    font-family: sans-serif;
+}
+
+table {
+    max-width: 700px;
+    width: 70vw;
+    margin: 1vh auto;
+    margin-bottom: 1vh;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 3vh rgba(0, 0, 0, 1);
+}
+table caption {
+    padding: 1vh;
+    caption-side: top;
+    text-align: left;
+    font-style: italic;
+    font-size: 2vmax;
+    color: rgba(120, 0, 0, 0.75);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 0.1vh solid rgba(120, 0, 0, 0.7);
+    text-shadow: 0 0 1vh rgba(0, 0, 0, 0.5);
+}
+table thead {
+    text-align: left;
+    font-size: 2vmax;
+    text-shadow: .1vh .1vh .2vh rgba(0, 0, 0, .8);
+}
+table tbody {
+    text-align: center;
+    font-size: 1.5vmax;
+    text-shadow: .1vh .1vh .2vh rgba(0, 0, 0, .8);
+}
+table td, table th {
+    padding: 0.5vmin;
+    border: 0.1vh solid rgba(120, 0, 0, 0.8);
+}
+table tfoot {
+    text-align: left;
+    font-size: 1.5vmax;
+    background-color: rgba(120, 120, 120, 0.45);
+    text-shadow: .4vh .2vh .5vh rgba(0, 0, 0, .8);
+}
+
+
+#formulario {
+    max-width: 1000px;
+    margin: 1vh auto;
+    width: 80vw;
+    border: 0.2vw solid rgba(120, 0, 0, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 5vh rgba(0, 0, 0, 0.8);
+}
+#formulario header {
+    margin: 3vw;
+    color: rgba(120, 0, 0, 0.75);
+    text-shadow: .3vh .2vh .3vh rgba(0, 0, 0, 0.6);
+    font-size: 3vmin;
+}
+#formulario fieldset {
+    transition: all 300ms ease-in-out;
+    margin: 1vh;
+    padding: 1vh;
+}
+#formulario fieldset:hover {
+    box-shadow: .5vh .5vh 2vh rgba(0, 0, 0, .8);
+}
+#formulario fieldset legend {
+    color: rgba(0, 0, 120, 0.75);
+    font-size: 2vmax;
+}
+#formulario button:hover {
+    transition: all 300ms ease-in-out;
+    background-color: darkred;
+    color: azure;
+    cursor: pointer;
+    box-shadow: .3vh .4vh 1vh rgba(0, 0, 0, 1);
+    text-shadow: .3vh .2vh 1vh rgba(255, 255, 255, 0.6);
+}
+#formulario label:hover {
+    cursor: pointer;
+}
+#formulario input {
+    font-size: 1.3vmax;
+}
+#formulario input:hover {
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+    text-shadow: 0 0 1vw rgba(0, 0, 0, 0.5);
+}
+
+#gen {
+    width: 40%;
+}
+#gen label {
+    font-size: 1.5vmax;
+}
+[masculino]{
+    color: blue;
+}
+[feminino]{
+    color: darkmagenta;
+}
+[outros]{
+    color: rgb(82, 47, 125);
+}
+
+#nasc{
+    width: 62%;
+    display: flex;
+    justify-content: center;
+    font-size: 2vmax;
+}
+#nascimento:hover {
+    box-shadow: .2vh .2vh .5vh rgba(0, 0, 0, 0.6);
+    text-shadow: 0 0 1vh rgba(0, 0, 0, 0.5);
+}
+#nascimento:focus {
+    transition: all 300ms ease-in-out;
+    box-shadow: .3vh .3vh 1vh rgba(0, 0, 0, 1);
+    text-shadow: 0 0 1vh rgba(0, 0, 0, 0.5);
+}
+
+#email {
+    width: 95%;
+    display: flex;
+    justify-content: space-evenly;
+}
+#correio {
+    margin: 1vw;
+    width: 50%;
+}
+#correio:hover {
+    box-shadow: .2vh .2vh .5vh rgba(0, 0, 0, 0.6);
+    text-shadow: 0 0 1vh rgba(0, 0, 0, 0.5);
+}
+#correio:focus {
+    transition: all 300ms ease-in-out;
+    box-shadow: .3vh .3vh 1vh rgba(0, 0, 0, 1);
+    text-shadow: 0 0 1vh rgba(0, 0, 0, 0.5);
+}
+#email label {
+    color: rgba(120, 0, 0, 0.75);
+    font-size: 1.2vmax;
+}
+
+#perfil {
+    width: 95%;
+    display: flex;
+    justify-content: space-evenly;
+}
+#perfil label {
+    color: rgba(120, 0, 0, 0.75);
+    font-size: 1.2vmax;
+}
+#arquivo {
+    width: 60%;
+}
+
+#sen {
+    width: 95%;
+    display: flex;
+    justify-content: space-evenly;
+}
+#sen label {
+    color: rgba(120, 0, 0, 0.75);
+    font-size: 1.2vmax;
+}
+#senha {
+    width: 34%;
+}
+#senha:hover {
+    box-shadow: .2vh .2vh .5vh rgba(0, 0, 0, 0.4);
+    text-shadow: 0 0 1vh rgba(0, 0, 0, 0.5);
+}
+#senha:focus {
+    transition: all 300ms ease-in-out;
+    box-shadow: .3vh .3vh 1vh rgba(0, 0, 0, 1);
+    text-shadow: 0 0 1vh rgba(0, 0, 0, 0.5);
+}
+
+#cores {
+    width: 95%;
+    display: flex;
+    justify-content: space-evenly;
+}
+#cores label {
+    color: rgba(120, 0, 0, 0.75);
+    font-size: 1.2vmax;
+}
+#cor {
+    width: 40%;
+}
+#cor:hover {
+    box-shadow: .3vh .3vh .5vh rgba(0, 0, 0, 0.65);
+}
+#cor:focus {
+    transition: all 300ms ease-in-out;
+    box-shadow: .4vh .4vh 1vh rgba(0, 0, 0, 1);
+    text-shadow: 0 0 1vh rgba(0, 0, 0, 0.5);
+}
+
+#slider {
+    width: 64%;
+    display: list-item;
+}
+#slider input {
+    margin: 0.5vh;
+}
+#red:hover {
+    box-shadow: .3vh .3vh .5vh rgba(255, 0, 0, 0.5);
+}
+#red:focus {
+    box-shadow: 0 0 1vh rgba(255, 0, 0, 1);
+}
+#green:hover {
+    box-shadow: .3vh .3vh .5vh rgba(0, 120, 0, 0.5);
+}
+#green:focus {
+    box-shadow: 0 0 1vh rgba(0, 120, 0, 1);
+}
+#blue:hover {
+    box-shadow: .3vh .3vh .5vh rgba(0, 0, 255, 0.5);
+}
+#blue:focus {
+    box-shadow: 0 0 1vh rgba(0, 0, 255, 1);
+}
+.ajuste-transicao:focus {
+    transition: all 300ms ease-in-out;
+}
+
+#rodape {
+    margin: 1vh auto;
+    width: 95%;
+    display: flex;
+    justify-content: space-evenly;
+}
+#rodape button {
+    padding: 1vw;
+}

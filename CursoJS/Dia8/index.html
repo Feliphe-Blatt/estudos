@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabelas & formulários</title>
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="icon" href="./assets/img/form-icon.png">
+    </head>
+    <body>
+        <table>
+            <caption>Descrição da Tabela:</caption>
+            <thead>
+                <tr><th>Topo 1</th>
+                    <th>Topo 2</th>
+                    <th>Topo 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Célula 1</td>
+                    <td>Célula 2</td>
+                    <td>Célula 3</td>
+                </tr>
+                <tr><td colspan="2" rowspan="2">Célula 4</td>
+                    <td>Célula 5</td>
+                </tr>
+                <tr><td>Célula 6</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr><td colspan="2"></td>
+                    <td>Resultado:</td>
+                </tr>
+            </tfoot>
+        </table>
+        <form id="formulario" action="" method="get" target="_blank" autocomplete="off">
+            <header>
+                <h1>Formulário:</h1>
+            </header>
+            <fieldset id="gen">
+                <legend><b>| Gênero |</b></legend>
+                <input type="radio" id="gen1" name="genero" value="masculino">
+                <label for="gen1" masculino>Masculino;</label><br>
+                <input type="radio" id="gen2" name="genero" value="feminino">
+                <label for="gen2" feminino>Feminino;</label><br>
+                <input type="radio" id="genx" name="genero" value="outros">
+                <label for="genx" outros>Outr@.</label>
+            </fieldset>
+            <fieldset id="nasc">
+                <legend><b>| Data de Nascimento |</b></legend>
+                <input type="date" id="nascimento" name="nascimento">
+            </fieldset>
+            <fieldset id="email">
+                <legend><b>| E-mail |</b></legend>
+                <input type="email" id="correio" list="emailpadrao" name="usuario" placeholder="seu-email@abcd.com">
+                <label for="correio">*Máximo de 30 caracteres!</label>
+                <datalist id="emailpadrao">
+                    <option value="@hotmail.com">
+                    <option value="@live.com">
+                    <option value="@gmail.com">
+                </datalist>
+            </fieldset>
+            <fieldset id="perfil">
+                <legend><b>| Foto de Perfil |</b></legend>
+                <label for="arquivo">*Somente Imagens!</label>
+                <input type="file" id="arquivo" name="fotoperfil" accept="image/*">
+            </fieldset>
+            <fieldset id="sen">
+                <legend><b>| Senha |</b></legend>
+                <input type="password" id="senha" name="senha" minlength="6" maxlength="8" placeholder="Sua Senha">
+                <label for="senha">*Mín. de 6 caracteres e máx. de 8 !</label>
+            </fieldset>
+            <fieldset id="cores">
+                <legend><b>| Cor |</b></legend>
+                <label for="cor">* Selecione uma cor qualquer:</label>
+                <input type="color" id="cor" name="cor">
+            </fieldset>
+            <fieldset id="slider">
+                <legend><b>| Slider RGB |</b></legend>
+                <label for="red"><b>R:</b></label>
+                <input type="range" class="ajuste-transicao" id="red" name="red" list="ticks" min="0" max="255" step="1">
+                <br>
+                <label for="green"><b>G:</b></label>
+                <input type="range" class="ajuste-transicao" id="green" name="green" list="ticks" min="0" max="255" step="1">
+                <br>
+                <label for="blue"><b>B:</b></label>
+                <input type="range" class="ajuste-transicao" id="blue" name="blue" list="ticks" min="0" max="255" step="1">
+                <br>
+                <datalist id="ticks">
+                    <option value="0">
+                    <option value="50">
+                    <option value="100">
+                    <option value="150">
+                    <option value="200">
+                    <option value="255">
+                </datalist>
+            </fieldset>
+            <footer id="rodape">
+                <button type="reset"><b>Resetar Formulário</b></button>
+                <button type="submit"><b>Enviar Formulário</b></button>
+            </footer>
+            <section id="resultados">
+
+            
+
+            </section>
+        </form>
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>
