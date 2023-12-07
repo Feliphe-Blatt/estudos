@@ -52,65 +52,43 @@ function escopo (){
 
         /////////////////////////////////////// Altera a cor da tabela de acordo com resultado
         function corTabela(a, b, c, d, e, f, g){
+
+            const verde = "#0de71c";
+            const branco = "#ffffff";
+
+            // Limpa cores
+            b.style.backgroundColor = branco;
+            c.style.backgroundColor = branco;
+            d.style.backgroundColor = branco;
+            e.style.backgroundColor = branco;
+            f.style.backgroundColor = branco;
+            g.style.backgroundColor = branco;
+
+            // Pinta o fundo do resultado de verde            
             if (a < 18.5){
-                b.style.backgroundColor = "#0de71c";
-                c.style.backgroundColor = "#ffffff";
-                d.style.backgroundColor = "#ffffff";
-                e.style.backgroundColor = "#ffffff";
-                f.style.backgroundColor = "#ffffff";
-                g.style.backgroundColor = "#ffffff";
-    
-            }else if((a >= 18.5) && (a <= 24.9)){
-                b.style.backgroundColor = "#ffffff";
-                c.style.backgroundColor = "#0de71c";
-                d.style.backgroundColor = "#ffffff";
-                e.style.backgroundColor = "#ffffff";
-                f.style.backgroundColor = "#ffffff";
-                g.style.backgroundColor = "#ffffff";
-    
-            }else if((a > 24.9) && (a <= 29.9)){
-                b.style.backgroundColor = "#ffffff";
-                c.style.backgroundColor = "#ffffff";
-                d.style.backgroundColor = "#0de71c";
-                e.style.backgroundColor = "#ffffff";
-                f.style.backgroundColor = "#ffffff";
-                g.style.backgroundColor = "#ffffff";
-    
-            }else if((a > 29.9) && (a <= 34.9)){
-                b.style.backgroundColor = "#ffffff";
-                c.style.backgroundColor = "#ffffff";
-                d.style.backgroundColor = "#ffffff";
-                e.style.backgroundColor = "#0de71c";
-                f.style.backgroundColor = "#ffffff";
-                g.style.backgroundColor = "#ffffff";
-    
-            }else if((a > 34.9) && (a <= 39.9)){
-                b.style.backgroundColor = "#ffffff";
-                c.style.backgroundColor = "#ffffff";
-                d.style.backgroundColor = "#ffffff";
-                e.style.backgroundColor = "#ffffff";
-                f.style.backgroundColor = "#0de71c";
-                g.style.backgroundColor = "#ffffff";
-    
-            }else if(a > 39.9){
-                b.style.backgroundColor = "#ffffff";
-                c.style.backgroundColor = "#ffffff";
-                d.style.backgroundColor = "#ffffff";
-                e.style.backgroundColor = "#ffffff";
-                f.style.backgroundColor = "#ffffff";
-                g.style.backgroundColor = "#0de71c";
-    
+                b.style.backgroundColor = verde;
+            }else if(a <= 24.9){
+                c.style.backgroundColor = verde;
+            }else if(a <= 29.9){
+                d.style.backgroundColor = verde;
+            }else if(a <= 34.9){
+                e.style.backgroundColor = verde;
+            }else if(a <= 39.9){
+                f.style.backgroundColor = verde;
+            }else {
+                g.style.backgroundColor = verde;
             }
         }
 
         /////////////////////////////////////// Escolhe veredito de acordo com resultado
         function vereditoTabela(a){
-            if (a < 18.5) return 'Abaixo do peso';
-            if(a <= 24.9) return 'Peso normal';
-            if(a <= 29.9) return 'Sobrepeso';
-            if(a <= 34.9) return 'Obesidade grau 1';
-            if(a <= 39.9) return 'Obesidade grau 2';
-            if(a > 39.9) return 'Obesidade grau 3';
+            const nivel = ['Abaixo do peso', 'Peso normal', 'Sobrepeso', 'Obesidade grau 1', 'Obesidade grau 2', 'Obesidade grau 3'];
+            if (a < 18.5) return nivel[0];
+            if(a <= 24.9) return nivel[1];
+            if(a <= 29.9) return nivel[2];
+            if(a <= 34.9) return nivel[3];
+            if(a <= 39.9) return nivel[4];
+            if(a > 39.9) return nivel[5];
         }
         
         /////////////////////////////////////// Troca resultado na tabela e altera a cor
