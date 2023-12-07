@@ -16,17 +16,11 @@ function escopo (){
         evento.preventDefault();
 
         // Input de foto será adicionado em breve!
-
         const foto = formulario.querySelector('#arquivo');
-
         const nascimento = formulario.querySelector('#nascimento');
-
         const correio = formulario.querySelector('#correio');
-
         const senha = formulario.querySelector('#senha');
-
         const cor = formulario.querySelector('#cor');
-
         const red = formulario.querySelector('#red');
         const green = formulario.querySelector('#green');
         const blue = formulario.querySelector('#blue');
@@ -46,11 +40,13 @@ function escopo (){
             }
             else if (genx.checked){
                 temporario = 'Outr@';
+            }else {
+                temporario = 'x'
             }
             return temporario;
         }
 
-        // addFormulario: Utilizado para gravar os resultados na lista completa de envios
+        // addFormulario: Utilizado para gravar os resultados na lista completa de envios (console.log)
         function addFormulario(a, b, c, d, e, f, g, h){
             const resultado = {
                 nascimento : a,

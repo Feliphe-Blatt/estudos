@@ -48,11 +48,11 @@
             </fieldset>
             <fieldset id="nasc">
                 <legend><b>| Data de Nascimento |</b></legend>
-                <input type="date" id="nascimento" name="nascimento">
+                <input type="date" id="nascimento" name="nascimento" required>
             </fieldset>
             <fieldset id="email">
                 <legend><b>| E-mail |</b></legend>
-                <input type="email" id="correio" list="emailpadrao" name="usuario" placeholder="seu-email@abcd.com">
+                <input type="email" id="correio" list="emailpadrao" name="usuario" placeholder="seu-email@abcd.com"  required>
                 <label for="correio">*Máximo de 30 caracteres!</label>
                 <datalist id="emailpadrao">
                     <option value="@hotmail.com">
@@ -67,8 +67,8 @@
             </fieldset>
             <fieldset id="sen">
                 <legend><b>| Senha |</b></legend>
-                <input type="password" id="senha" name="senha" minlength="6" maxlength="8" placeholder="Sua Senha">
-                <label for="senha">*Mín. de 6 caracteres e máx. de 8 !</label>
+                <input type="password" id="senha" name="senha" minlength="6" maxlength="12" placeholder="Sua Senha" required>
+                <label for="senha">*Mín. de 6 caracteres e máx. de 12 !</label>
             </fieldset>
             <fieldset id="cores">
                 <legend><b>| Cor |</b></legend>
@@ -105,15 +105,15 @@
                     <tbody>
                         <tr>
                             <td>Gênero</td>
-                            <td id="h">x</td>
+                            <td><b id="h">x</b></td>
                         </tr>
                         <tr>
                             <td>Foto</td>
-                            <td>(Sem foto)</td>
+                            <td><b>(Sem foto)</b></td>
                         </tr>
                         <tr>
                             <td>Nascimento</td>
-                            <td><b id="a">dd/mm/aaaa</b></td>
+                            <td><b id="a">aaaa/ddd/mm</b></td>
                         </tr>
                         <tr>
                             <td>E-mail</td>
