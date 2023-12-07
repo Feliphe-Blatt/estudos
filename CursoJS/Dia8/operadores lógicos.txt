@@ -1,0 +1,18 @@
+
+Operadores lógicos:
+
+&&  AND
+||  OR
+!   NOT
+
+true
+false
+
+todos abaixo são false:
+    0
+    ''
+    ""
+    ``
+    null
+    undefined
+    NaN
