@@ -7,7 +7,7 @@ function addAluno(x, y, z){
 
         bemVindo (){
             alert(`Bem vindo a nossa turma ${this.nome}!`);
-        }  
+        }
     };
     alert(`${aluno.nome} Adicionado!`);
     return aluno;
