@@ -41,13 +41,18 @@ function escopo (){
             }
         }
 
-        /////////////////////////////////////// Altera nome, caso não exista mantém sem nome
+        /////////////////////////////////////// Altera nome, caso não exista mantém (sem nome)
         function setNome(a){
-            if(a.nome != ''){
-                return a.nome;
-            }else {
-                return '(Sem Nome)';
-            }
+            let retornaNome = (a.nome != '') ? a.nome : '(Sem Nome)';
+            
+            return retornaNome;
+            /*
+                if(a.nome != ''){
+                    return a.nome;
+                }else {
+                    return '(Sem Nome)';
+                }
+            */
         }
 
         /////////////////////////////////////// Altera a cor da tabela de acordo com resultado
