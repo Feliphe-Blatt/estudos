@@ -1,50 +1,58 @@
-function escopo (){
+function escopo() {
     let contador = 1;
     const formulario = document.querySelector('#formulario');
-    
+
     const formularios = [];
 
+    
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    function getIMC(evento){
+    function getIMC(evento) {
         evento.preventDefault();
 
+        /////////////////////////////////////// Altera nome, caso não exista mantém (sem nome)
+        function validaNome(a) {
+            let retornaNome = (a != '') ? a : '(Sem Nome)';
+
+            return retornaNome;
+        }
+
         /////////////////////////////////////// Confere se peso é válido
-        function conferePeso(a){
-            if(!a.peso){
+        function conferePeso(a) {
+            if (!a.peso) {
                 alert('Entrada de peso inválida!');
                 return null;
-            }else {
+            } else {
                 return a.peso;
             }
         }
 
         /////////////////////////////////////// Confere se altura é válida
-        function confereAltura(a){
-            if(!a.altura){
+        function confereAltura(a) {
+            if (!a.altura) {
                 alert('Entrada de altura inválida!');
                 return null;
-            }else {
+            } else {
                 return a.altura;
             }
         }
 
         /////////////////////////////////////// Faz teste de altura e peso, retornando o perfil caso seja válido
-        function validaPessoa(a){
+        function validaPessoa(a) {
             const testePeso = conferePeso(a);
             const testeAltura = confereAltura(a);
-            
-            if (testePeso && testeAltura){
+
+            if (testePeso && testeAltura) {
                 resultadoTabela(a);
                 return a;
-            }else {
+            } else {
                 return 'Entrada inválida!';
             }
         }
 
         /////////////////////////////////////// Altera nome, caso não exista mantém (sem nome)
-        function setNome(a){
+        function setNome(a) {
             let retornaNome = (a.nome != '') ? a.nome : '(Sem Nome)';
-            
+
             return retornaNome;
             /*
                 if(a.nome != ''){
@@ -56,7 +64,7 @@ function escopo (){
         }
 
         /////////////////////////////////////// Altera a cor da tabela de acordo com resultado
-        function corTabela(a, b, c, d, e, f, g){
+        function corTabela(a, b, c, d, e, f, g) {
 
             const verde = "#0de71c";
             const branco = "#ffffff";
@@ -70,34 +78,34 @@ function escopo (){
             g.style.backgroundColor = branco;
 
             // Pinta o fundo do resultado de verde            
-            if (a < 18.5){
+            if (a < 18.5) {
                 b.style.backgroundColor = verde;
-            }else if(a <= 24.9){
+            } else if (a <= 24.9) {
                 c.style.backgroundColor = verde;
-            }else if(a <= 29.9){
+            } else if (a <= 29.9) {
                 d.style.backgroundColor = verde;
-            }else if(a <= 34.9){
+            } else if (a <= 34.9) {
                 e.style.backgroundColor = verde;
-            }else if(a <= 39.9){
+            } else if (a <= 39.9) {
                 f.style.backgroundColor = verde;
-            }else {
+            } else {
                 g.style.backgroundColor = verde;
             }
         }
 
         /////////////////////////////////////// Escolhe veredito de acordo com resultado
-        function vereditoTabela(a){
+        function vereditoTabela(a) {
             const nivel = ['Abaixo do peso', 'Peso normal', 'Sobrepeso', 'Obesidade grau 1', 'Obesidade grau 2', 'Obesidade grau 3'];
             if (a < 18.5) return nivel[0];
-            if(a <= 24.9) return nivel[1];
-            if(a <= 29.9) return nivel[2];
-            if(a <= 34.9) return nivel[3];
-            if(a <= 39.9) return nivel[4];
-            if(a > 39.9) return nivel[5];
+            if (a <= 24.9) return nivel[1];
+            if (a <= 29.9) return nivel[2];
+            if (a <= 34.9) return nivel[3];
+            if (a <= 39.9) return nivel[4];
+            if (a > 39.9) return nivel[5];
         }
-        
+
         /////////////////////////////////////// Troca resultado na tabela e altera a cor
-        function resultadoTabela(a){
+        function resultadoTabela(a) {
             const nome = document.getElementById('nomeTabela');
             const imc = document.getElementById('resultadoTabela');
             const veredito = document.getElementById('ver');
@@ -116,29 +124,47 @@ function escopo (){
         }
 
         /////////////////////////////////////// Cria o 'perfil' e mostra resultado
-        function addFormulario(a, b, c){
+        function addFormulario(a, b, c) {
+
             const pessoa = {
-                nome : a,
-                peso : b,
-                altura : c,
-                imc (){
+
+                nome: validaNome(a),
+                peso: b,
+                altura: c,
+
+                imc() {
                     let temporario = 0;
-                    temporario = (this.peso / (this.altura**2));
+                    temporario = (this.peso / (this.altura ** 2));
                     return temporario.toFixed(1);
                 }
             };
+
             return validaPessoa(pessoa);
+        }
+
+        /////////////////////////////////////// Exibe histórico temporário dos cálculos realizados no console.log()
+        function historico(form) {
+            console.clear();
+            console.log('//////////////////////////////////////////////////////////////////////////////////////');
+            for (let i = 0; i < form.length; i++) {
+                console.log(`\n/////////////////> Registro n°: ${i+1}`);
+                console.log(`Nome: ${form[i].nome};`);
+                console.log(`Peso: ${form[i].peso};`);
+                console.log(`Altura: ${form[i].altura};`);
+                console.log(`IMC: ${form[i].imc()};`);
+                console.log(`Veredito: ${vereditoTabela(form[i].imc())}\n`);
+            }
+            console.log('\n//////////////////////////////////////////////////////////////////////////////////////');
         }
 
         const nome = formulario.querySelector('#nome');
         const peso = formulario.querySelector('#peso');
         const altura = formulario.querySelector('#altura');
-        
-        formularios.push(addFormulario(nome.value, Number(peso.value), Number(altura.value)));
 
-        console.log(formularios);
+        formularios.push(addFormulario(nome.value, Number(peso.value), Number(altura.value)));
+        historico(formularios);
     }
-    
+
     formulario.addEventListener('submit', getIMC);
 }
 
