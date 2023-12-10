@@ -39,5 +39,5 @@ console.log(`
         -> pt: ${pegaMedia(aluno, 0)};\n
         -> mat: ${pegaMedia(aluno, 1)};\n
         -> ing: ${pegaMedia(aluno, 2)};\n
-        -> lit ${pegaMedia(aluno, 3)}.
+        -> lit: ${pegaMedia(aluno, 3)}.
 `);
