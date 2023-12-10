@@ -4,7 +4,7 @@ function escopo() {
 
     const formularios = [];
 
-    
+
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////
     function getIMC(evento) {
         evento.preventDefault();
@@ -147,12 +147,25 @@ function escopo() {
             console.clear();
             console.log('//////////////////////////////////////////////////////////////////////////////////////');
             for (let i = 0; i < form.length; i++) {
-                console.log(`\n/////////////////> Registro n°: ${i+1}`);
-                console.log(`Nome: ${form[i].nome};`);
-                console.log(`Peso: ${form[i].peso};`);
-                console.log(`Altura: ${form[i].altura};`);
-                console.log(`IMC: ${form[i].imc()};`);
-                console.log(`Veredito: ${vereditoTabela(form[i].imc())}\n`);
+                console.log(`\n/////////////////> Registro n°: ${i + 1}`);
+                try{
+                    if(typeof (form[i].nome) != 'undefined'){
+
+                    console.log(`Nome: ${form[i].nome};`);
+                    console.log(`Peso: ${form[i].peso};`);
+                    console.log(`Altura: ${form[i].altura};`);
+                    console.log(`IMC: ${form[i].imc()};`);
+                    console.log(`Veredito: ${vereditoTabela(form[i].imc())}\n`);
+
+                    }else{
+                        throw('\nEntrada inválida "throw" !\n');
+                    }
+                }catch(erro){
+                    console.log(erro);
+                    console.log('\nEntrada inválida "catch" !\n');
+                }finally {
+                    console.log('Essa frase irá se repetir de qualquer forma (finally)...');
+                }
             }
             console.log('\n//////////////////////////////////////////////////////////////////////////////////////');
         }
@@ -162,6 +175,7 @@ function escopo() {
         const altura = formulario.querySelector('#altura');
 
         formularios.push(addFormulario(nome.value, Number(peso.value), Number(altura.value)));
+        
         historico(formularios);
     }
 

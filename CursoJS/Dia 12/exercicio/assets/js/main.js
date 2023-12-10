@@ -10,3 +10,9 @@ for(let p of ps){
     p.style.backgroundColor = corDoCorpo;
     p.style.color = '#ffffff';
 }
+
+const pegaFoto = document.getElementById('imagem');
+
+const paisagem = (larg, alt) => alt > larg ? "É retrato" : "É paisagem";
+
+console.log(paisagem(1920, 1080));
