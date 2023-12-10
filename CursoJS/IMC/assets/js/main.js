@@ -11,9 +11,9 @@ function escopo() {
 
         /////////////////////////////////////// Altera nome, caso não exista mantém (sem nome)
         function validaNome(a) {
-            let retornaNome = (a != '') ? a : '(Sem Nome)';
+            const retornaNome = (a) => a != '' ? a : '(Sem Nome)';
 
-            return retornaNome;
+            return retornaNome(a);
         }
 
         /////////////////////////////////////// Confere se peso é válido
