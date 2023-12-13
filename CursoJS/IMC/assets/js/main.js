@@ -158,13 +158,13 @@ function escopo() {
                     console.log(`Veredito: ${vereditoTabela(form[i].imc())}\n`);
 
                     }else{
-                        throw('\nEntrada inválida "throw" !\n');
+                        throw new TypeError('\nThrow: Somente números, jovem gafanhoto...\n');
                     }
                 }catch(erro){
                     console.log(erro);
-                    console.log('\nEntrada inválida "catch" !\n');
+                    console.log('\nCatch: Tente outra vez!\n');
                 }finally {
-                    console.log('Essa frase irá se repetir de qualquer forma (finally)...');
+                    console.log('Finally: Esta frase irá se repetir de qualquer forma...');
                 }
             }
             console.log('\n//////////////////////////////////////////////////////////////////////////////////////');
