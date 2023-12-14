@@ -12,26 +12,36 @@
 <body>
 
   <section class="container">
-    <h1>Lista de tarefas:</h1>
-    <form action="" target="_self">
-      <label for="taskToAdd">Tarefa a ser adicionada:</label>
-      <input type="text" name="taskBoxAdd" id="taskToAdd" placeholder="Adicione uma tarefa aqui...">
-      <button class="addTarefa">Adicionar</button>
 
-      <label for="taskToEdit">Tarefa a ser editada:</label>
-      <input type="text" name="taskBoxEdit" id="taskToEdit">
-      <button class="editTarefa">Editar</button>
+    <h1>Lista de tarefas:</h1>
+
+    <form action="" target="_self">
+      <p class="add">
+        <label for="taskToAdd">Tarefa a ser adicionada:</label>
+        <input type="text" name="taskBoxAdd" id="taskToAdd" placeholder="Adicione uma tarefa aqui...">
+        <button class="addTarefa">Adicionar</button>
+      </p>
+
+      <p class="edit" style="opacity: .5;">
+        <label for="taskToEdit">Tarefa a ser editada:</label>
+        <input type="text" name="taskBoxEdit" id="taskToEdit" value="Tarefa a ser editada...">
+        <button class="editTarefa">Editar</button>
+      </p>
     </form>
     <p>
       <button class="alternar">Alternar visão da Lista</button>
     <table class="lista" style="opacity: .5;">
-      <th>Lista de Tarefas</th>
+      <th colspan="2">Lista de Tarefas</th>
       <tr>
-        <td>x</td>
+        <td>
+          <p style="display:list-item">"Vai ter alguma tarefa aqui..."</p>
+        </td>
+        <td style="display: center;">
+          <button class="listEdit">Editar</button>
+          <button class="listEdit">Apagar</button>
+        </td>
       </tr>
-      <tr>
-        <td>x</td>
-      </tr>
+      
     </table>
     </p>
   </section>

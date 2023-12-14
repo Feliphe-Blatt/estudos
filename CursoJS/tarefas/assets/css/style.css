@@ -26,6 +26,16 @@ body {
   border-radius: 10px;
 }
 
+form, .titulo {
+  max-width: 640px;
+  margin: 50px auto;
+  background: rgb(200, 230, 230);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 3vh rgba(0, 0, 0, .5);
+  transition: 0.5s;
+}
+
 form input, form label, form button, .alternar {
   display: block;
   width: 100%;
@@ -55,6 +65,7 @@ form button, .alternar {
 
 form button:hover, .alternar:hover {
   background: var(--primary-color-darker);
+  transition: 0.5s;
 }
 
 table {
