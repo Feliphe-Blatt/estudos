@@ -26,7 +26,7 @@ body {
   border-radius: 10px;
 }
 
-form input, form label, form button {
+form input, form label, form button, .alternar {
   display: block;
   width: 100%;
   margin-bottom: 10px;
@@ -42,7 +42,7 @@ form input:focus {
   outline: 1px solid var(--primary-color);
 }
 
-form button {
+form button, .alternar {
   border: none;
   background: var(--primary-color);
   color: #fff;
@@ -50,9 +50,48 @@ form button {
   font-weight: 700;
   height: 50px;
   cursor: pointer;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
-form button:hover {
+form button:hover, .alternar:hover {
   background: var(--primary-color-darker);
+}
+
+table {
+  margin: 1vh auto;
+  margin-bottom: 1vh;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 3vh rgba(0, 0, 0, 1);
+}
+table caption {
+  padding: 1vh;
+  caption-side: top;
+  text-align: left;
+  font-style: italic;
+  font-size: 2vmax;
+  color: rgba(120, 0, 0, 0.75);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 0.1vh solid rgba(120, 0, 0, 0.7);
+  text-shadow: 0 0 1vh rgba(0, 0, 0, 0.5);
+}
+table thead {
+  text-align: center;
+  font-size: 2vmax;
+  text-shadow: .1vh .1vh .2vh rgba(0, 0, 0, .8);
+}
+table tbody {
+  text-align: center;
+  font-size: 1.5vmax;
+  text-shadow: .1vh .1vh .2vh rgba(0, 0, 0, .8);
+}
+table td, table th {
+  padding: 0.5vmin;
+  border: 0.1vh solid rgba(120, 0, 0, 0.8);
+}
+table tfoot {
+  text-align: center;
+  font-size: 1.5vmax;
+  background-color: rgba(120, 120, 120, 0.45);
+  text-shadow: .4vh .2vh .5vh rgba(0, 0, 0, .8);
 }

@@ -5,19 +5,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Modelo</title>
+  <title>C.R.U.D. de tarefas</title>
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
 
   <section class="container">
-    <h1>Lorem ipsum dolor sit amet</h1>
+    <h1>Lista de tarefas:</h1>
+    <form action="" target="_self">
+      <label for="taskToAdd">Tarefa a ser adicionada:</label>
+      <input type="text" name="taskBoxAdd" id="taskToAdd" placeholder="Adicione uma tarefa aqui...">
+      <button class="addTarefa">Adicionar</button>
+
+      <label for="taskToEdit">Tarefa a ser editada:</label>
+      <input type="text" name="taskBoxEdit" id="taskToEdit">
+      <button class="editTarefa">Editar</button>
+    </form>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      Repellendus nisi explicabo saepe voluptatibus consequuntur et corporis
-      maxime quos, doloribus vitae voluptatum quisquam necessitatibus
-      pariatur veritatis exercitationem beatae officiis suscipit Ea!
+      <button class="alternar">Alternar visão da Lista</button>
+    <table class="lista" style="opacity: .5;">
+      <th>Lista de Tarefas</th>
+      <tr>
+        <td>x</td>
+      </tr>
+      <tr>
+        <td>x</td>
+      </tr>
+    </table>
     </p>
   </section>
 
