@@ -10,34 +10,33 @@
 </head>
 
 <body>
-
   <section class="container">
-
-    <h1>Lista de tarefas:</h1>
+    <h1 class="titulo">Lista de tarefas:</h1>
 
     <p class="add">
-      <label for="taskToAdd">Tarefa a ser adicionada:</label>
-      <input type="text" name="taskBoxAdd" id="taskToAdd" placeholder="Adicione uma tarefa aqui...">
-      <button class="addTarefa">Adicionar</button>
+      <label for="taskToAdd"><b>Tarefa a ser adicionada:</b></label>
+      <input type="text" name="taskBoxAdd" id="task-to-add" placeholder="Adicione uma tarefa aqui...">
+      <button class="add-tarefa">Adicionar</button>
     </p>
 
     <p id="edit">
-      <label for="taskToEdit">Tarefa a ser editada:</label>
-      <input type="text" name="taskBoxEdit" id="taskToEdit" value="Tarefa a ser editada...">
+      <label for="taskToEdit"><b>Tarefa a ser editada:</b></label>
+      <input type="text" name="taskBoxEdit" id="task-to-edit" value="Tarefa a ser editada...">
       <button class="editTarefa">Editar</button>
     </p>
 
     <button class="alternar">Alternar visão da Lista</button>
 
-    <table id="lista">
+    <table id="list">
       <th colspan="2">Lista de Tarefas</th>
       <tr>
         <td>
-          <h1 class="container, listItem">"Vai ter alguma tarefa aqui..."</h1>
+          <h1 class="listItem">
+            "Tarefa 1"
+          </h1>
         </td>
-
         <td>
-          <button class="listEdit">Editar</button>
+          <button class="list-edit">Editar</button>
           <button class="listErase">Apagar</button>
         </td>
       </tr>
