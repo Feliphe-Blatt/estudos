@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>C.R.U.D. de tarefas</title>
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="icon" href="./assets/img/form-icon.png">
 </head>
 
 <body>
@@ -14,32 +15,34 @@
     <h1 class="titulo">Lista de tarefas:</h1>
 
     <p class="add">
-      <label for="taskToAdd"><b>Tarefa a ser adicionada:</b></label>
+      <label for="task-to-add"><b>Tarefa a ser adicionada:</b></label>
       <input type="text" name="taskBoxAdd" id="task-to-add" placeholder="Adicione uma tarefa aqui...">
-      <button class="add-tarefa">Adicionar</button>
+      <button class="add-tarefa" title="Adicionar a tarefa">Adicionar</button>
     </p>
 
     <p id="edit">
-      <label for="taskToEdit"><b>Tarefa a ser editada:</b></label>
-      <input type="text" name="taskBoxEdit" id="task-to-edit" value="Tarefa a ser editada...">
-      <button class="editTarefa">Editar</button>
+      <label for="task-to-edit"><b>Tarefa a ser editada:</b></label>
+      <input type="text" name="taskBoxEdit" id="task-to-edit">
+      <button class="edit-tarefa" title="Editar a tarefa">Editar</button>
     </p>
 
-    <button class="alternar">Alternar visão da Lista</button>
+    <button class="list-alt" title="Ligar ou desligar a visão da lista de tarefas">Alternar visão da Lista</button>
 
     <table id="list">
       <th colspan="2">Lista de Tarefas</th>
-      <tr>
-        <td>
-          <h1 class="listItem">
-            "Tarefa 1"
-          </h1>
-        </td>
-        <td>
-          <button class="list-edit">Editar</button>
-          <button class="listErase">Apagar</button>
-        </td>
-      </tr>
+      <tbody id="lista-de-tarefas">
+        <tr>
+          <td>
+            <h1 class="listItem" id="item-x">
+              Tarefa x
+            </h1>
+          </td>
+          <td>
+            <button class="list-edit" id="btn-edit-x" title="Editar a tarefa">Editar</button>
+            <button class="list-erase" id="btn-erase-x" title="Apagar a tarefa">Apagar</button>
+          </td>
+        </tr>
+      </tbody>
     </table>
   </section>
 

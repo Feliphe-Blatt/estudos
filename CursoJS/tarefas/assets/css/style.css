@@ -36,7 +36,7 @@ p {
   transition: 0.5s;
 }
 
-p input, p label, p button, .alternar {
+p input, p label, p button, .list-alt {
   display: block;
   width: 100%;
   margin-bottom: 10px;
@@ -52,7 +52,7 @@ input:focus {
   outline: 1px solid var(--primary-color);
 }
 
-p button, .alternar {
+p button, .list-alt {
   border: none;
   background: var(--primary-color);
   color: #fff;
@@ -63,7 +63,7 @@ p button, .alternar {
   margin-top: 20px;
 }
 
-p button:hover, .alternar:hover {
+p button:hover, .list-alt:hover {
   background: var(--primary-color-darker);
   transition: 0.5s;
 }
@@ -91,9 +91,12 @@ table td, table th {
   padding: 0.5vmin;
 }
 
-#edit, #list {
+#edit {
   visibility: hidden;
   opacity: 0;
+  transition: .5s;
+}
+#list {
   transition: .5s;
 }
 
