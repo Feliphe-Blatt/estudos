@@ -97,6 +97,8 @@ table td, table th {
   transition: .5s;
 }
 #list {
+  visibility: hidden;
+  opacity: 0;
   transition: .5s;
 }
 
