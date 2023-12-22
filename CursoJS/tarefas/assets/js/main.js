@@ -13,7 +13,7 @@ function escopo() {
         }
     }
 
-    function atualizaLista(a){
+    function atualizaLista(a) {
         corpo.innerHTML = listaPadrao;
 
         for (let i = 0; i < a.length; i++) {
@@ -102,35 +102,35 @@ function escopo() {
     }
 
     /////////////////////////////////////////////////////////////////////////// Substitui a tarefa a editar
-    function pegaTarefaParaEditar(element){
+    function pegaTarefaParaEditar(element) {
         let idTarefa = element.id.replace('btn-edit-', '');  // Seleciona e separa index
         tarefaParaEditar.value = tarefas[idTarefa];
         return idTarefa;
     }
-    
-    function editaBotao(element, texto){
+
+    function editaBotao(element, texto) {
         const i = pegaTarefaParaEditar(element);
         const temp = document.querySelector(`#btn-edit-${i}`);
         temp.innerHTML = texto;
     }
 
-    function verificaEdit(element){
-        if(flagEdit){
-            if(idAnterior===element.id){
+    function verificaEdit(element) {
+        if (flagEdit) {
+            if (idAnterior === element.id) {
                 alternaEdit();
                 editaBotao(element, 'Editar');
-            }else{
+            } else {
                 const botaoAnterior = document.querySelector(`#${idAnterior}`);
                 botaoAnterior.innerHTML = "Editar";
                 editaBotao(element, 'Cancelar');
             }
-        }else{
+        } else {
             alternaEdit();
             editaBotao(element, 'Cancelar');
         }
     }
 
-    function editaTarefa(tarefaEditada){
+    function editaTarefa(tarefaEditada) {
         const temp = idAnterior.replace('btn-edit-', '');
         tarefas[temp] = tarefaEditada;
     }
@@ -172,16 +172,16 @@ function escopo() {
             salvaTarefas(tarefas);
         }
     });
-    tarefaParaEditar.addEventListener('keypress', function (e) {  // Quando 'enter' for pressionado na adição da tarefa
+    tarefaParaEditar.addEventListener('keypress', function (e) {  // Quando 'enter' for pressionado na edição da tarefa
         if (e.keyCode === 13) {
             if (!tarefaParaEditar.value) return;
             editaTarefa(tarefaParaEditar.value);
             salvaTarefas(tarefas);
-            if(flagLista) atualizaLista(tarefas);
+            if (flagLista) atualizaLista(tarefas);
             alternaEdit();
         }
     });
-    
+
 
     document.addEventListener('click', function (event) {
         const element = event.target;
@@ -195,7 +195,7 @@ function escopo() {
             if (!tarefaParaEditar.value) return;
             editaTarefa(tarefaParaEditar.value);
             salvaTarefas(tarefas);
-            if(flagLista) atualizaLista(tarefas);
+            if (flagLista) atualizaLista(tarefas);
             alternaEdit();
         }
         if (element.classList.contains('list-alt')) {  // Alternar visão da lista
