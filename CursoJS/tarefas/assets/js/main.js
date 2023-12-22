@@ -87,7 +87,6 @@ function escopo() {
             escreveTarefa(tarefa, tarefas.length);
         }
         tarefas.push(tarefa);
-        salvaTarefas(tarefas);
         limpaInput();
     }
 
@@ -99,11 +98,6 @@ function escopo() {
 
         let idTarefa = element.id.replace('btn-erase-', '');  // Seleciona e separa index
         const itemRemovido = tarefas.splice(idTarefa, 1);
-
-        // console.log(tarefas);
-        salvaTarefas(tarefas);
-        atualizaLista(tarefas);
-
         return itemRemovido;
     }
 
@@ -119,7 +113,7 @@ function escopo() {
         const temp = document.querySelector(`#btn-edit-${i}`);
         temp.innerHTML = texto;
     }
-    
+
     function verificaEdit(element){
         if(flagEdit){
             if(idAnterior===element.id){
@@ -136,6 +130,10 @@ function escopo() {
         }
     }
 
+    function editaTarefa(tarefaEditada){
+        const temp = idAnterior.replace('btn-edit-', '');
+        tarefas[temp] = tarefaEditada;
+    }
 
     ///////////////////////////////////////////////////////////////////////////  Variáveis e eventos
 
@@ -171,8 +169,19 @@ function escopo() {
         if (e.keyCode === 13) {
             if (!tarefaParaAdd.value) return;
             addTarefa(tarefaParaAdd.value, flagLista);
+            salvaTarefas(tarefas);
         }
     });
+    tarefaParaEditar.addEventListener('keypress', function (e) {  // Quando 'enter' for pressionado na adição da tarefa
+        if (e.keyCode === 13) {
+            if (!tarefaParaEditar.value) return;
+            editaTarefa(tarefaParaEditar.value);
+            salvaTarefas(tarefas);
+            if(flagLista) atualizaLista(tarefas);
+            alternaEdit();
+        }
+    });
+    
 
     document.addEventListener('click', function (event) {
         const element = event.target;
@@ -180,19 +189,29 @@ function escopo() {
         if (element.classList.contains('add-tarefa')) {  // Adição de tarefa
             if (!tarefaParaAdd.value) return;
             addTarefa(tarefaParaAdd.value, flagLista);
+            salvaTarefas(tarefas);
+        }
+        if (element.classList.contains('edit-tarefa')) {  // Botão para de fato editar
+            if (!tarefaParaEditar.value) return;
+            editaTarefa(tarefaParaEditar.value);
+            salvaTarefas(tarefas);
+            if(flagLista) atualizaLista(tarefas);
+            alternaEdit();
         }
         if (element.classList.contains('list-alt')) {  // Alternar visão da lista
             alternaLista(tarefas);
         }
-        if (element.classList.contains('list-edit')) {  // Edição da tarefa
+        if (element.classList.contains('list-edit')) {  // Alterna visão da edição da tarefa
             if (element.id === 'btn-edit-x') return;  //  Nada acontece com o Exemplo de tarefa
             verificaEdit(element);
             idAnterior = element.id;
         }
         if (element.classList.contains('list-erase')) {  // Apagar tarefa
-            if (flagEdit === true) alternaEdit(flagEdit);
             if (element.id === 'btn-erase-x') return;  //  Nada acontece com o Exemplo de tarefa
+            if (flagEdit === true) alternaEdit();
             apagarTarefa(element);
+            salvaTarefas(tarefas);
+            atualizaLista(tarefas);
         }
     });
 }
