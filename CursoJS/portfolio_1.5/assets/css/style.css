@@ -1,0 +1,118 @@
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, .2);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth !important;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow-x: auto;
+    background-color: rgba(0, 0, 0, .8);
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#quadro {
+    overflow: auto;
+    display: grid;
+    align-items: center;
+    padding: 0vh 1vw;
+    margin: 1.5vh auto;
+    width: 66vw;
+    height: 97vh;
+    background-image:
+        radial-gradient(transparent, transparent,rgba(0,0,0, .5) 75%),
+        url("../img/pinboard.jpg");
+    background-size: cover;
+    background-position: left top;
+    border: 2vh solid transparent;
+    border-image-slice: 27 27 27 27;
+    border-image-width: 2vh;
+    border-image-outset: 0;
+    border-image-repeat: round round;
+    border-image-source: url("../img/wooden-frame.jpg");
+    box-shadow: 0 0 2vw rgba(0, 0, 0, 1);
+    transition: all 100ms ease-in-out;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#prancheta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: auto 2vw;
+    height: 28vw;
+    max-height: 290px;
+    width: 26vw;
+    max-width: 270px;
+    border-radius: 6%;
+    background-image: url("../img/prancheta.png");
+    background-size: cover;
+    background-position: top center;
+    border: .1vh solid rgba(0, 0, 0, .4);
+    filter: drop-shadow(0vw 0vh .5vw rgba(0, 0, 0, .8));
+    transition: all 200ms ease-in-out;
+}
+#prancheta:hover {
+    filter: drop-shadow(0vw 0vh 1vw rgba(0, 0, 0, 1));
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#secoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#secoes li {
+    list-style: none;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 26px;
+    margin: 3% 0vw;
+    position: relative;
+    padding-left: .5vw;
+    width: fit-content;
+}
+#secoes a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 200ms ease-in-out;
+    color: rgb(50, 0, 0);
+    text-shadow: 0 0 .5vw rgba(0, 0, 0, .5);
+}
+#secoes a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 90%;
+    width: .2vw;
+    background:rgb(40, 0, 0);
+}
+#secoes a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: .2vh;
+    background:rgb(40, 0, 0);
+    transition: all 200ms ease-in-out;
+}
+#secoes a:hover::after {
+    width: 100%;
+}
