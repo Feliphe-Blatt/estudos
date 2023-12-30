@@ -1,7 +1,7 @@
 
-#tarefas-mobile {
+.site-mobile {
     background-image: url("../img/form-mobile.png");
 }
-#tarefas-desktop {
+.desktop {
     background-image: url("../img/form-desktop.png");
 }

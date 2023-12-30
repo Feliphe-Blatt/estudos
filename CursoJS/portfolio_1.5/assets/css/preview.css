@@ -5,7 +5,8 @@
 }
 .exemplo-site {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    list-style: none;
     margin: 1vh auto;
 }
 
@@ -16,17 +17,17 @@
     align-items: center;
     background-size: 13vw;
     background-repeat: no-repeat;
-    background-position: 50% 11%;
+    background-position: 50% 38%;
     filter: drop-shadow(0vw 0vh .5vw rgba(0, 0, 0, .8));
 }
-.site {
+.site-desktop {
     height: 10vw;
     width: 16.3vw;
     border-radius: 10%;
     filter: drop-shadow(0vw 0vh .5vw rgba(0, 0, 0, .8));
     transition: all 200ms ease-in-out;
 }
-.site:hover {
+.site-desktop:hover {
     cursor: pointer;
     filter: drop-shadow(0vw 0vh 1vw rgba(0, 0, 0, 1));
 }
