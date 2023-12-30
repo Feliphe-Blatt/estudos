@@ -1,7 +1,6 @@
 #infos {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
 }
 #foto-perfil {
     background-image: url("../img/profile-pic.jpeg");
