@@ -1,5 +1,5 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+    Configuração geral
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 ::-webkit-scrollbar {
     width: 8px;
@@ -19,6 +19,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth !important;
 }
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 body {
     font-family: 'Open Sans', sans-serif;
     display: flex;
@@ -30,7 +31,7 @@ body {
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+    Quadro Principal
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #quadro {
     overflow: auto;
@@ -55,8 +56,28 @@ body {
     transition: all 100ms ease-in-out;
 }
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.wrapper-descricao {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60%;
+    border-radius: 1vw;
+    margin: 2vh 0vw;
+    padding: 1vh .5vw;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: .2vw .1vh 1vh rgba(0, 0, 0, 0.7);
+    border: solid .1vh rgba(0, 0, 0, .2);
+    transition: all 200ms ease-in-out;
+    list-style: inside;
+}
+.wrapper-descricao:hover {
+    box-shadow: .2vw .1vh 2vh rgba(0, 0, 0, 1);
+}
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Prancheta onde fica o "menu" do site
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #prancheta {
     display: flex;
@@ -80,9 +101,7 @@ body {
     filter: drop-shadow(0vw 0vh 1vw rgba(0, 0, 0, 1));
 }
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #secoes {
     display: flex;
     justify-content: center;
@@ -130,69 +149,9 @@ body {
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+    Apresentação de conhecimentos
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-.sites {
-    
-}
-.desktop {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: 13vw;
-    background-repeat: no-repeat;
-    background-position: 50% 38%;
-    filter: drop-shadow(0vw 0vh .5vw rgba(0, 0, 0, .8));
-}
-.site-desktop {
-    height: 10vw;
-    width: 16.3vw;
-    border-radius: 10%;
-    filter: drop-shadow(0vw 0vh .5vw rgba(0, 0, 0, .8));
-    transition: all 200ms ease-in-out;
-}
-.site-desktop:hover {
-    cursor: pointer;
-    filter: drop-shadow(0vw 0vh 1vw rgba(0, 0, 0, 1));
-}
 
-
-.site-mobile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: 7vw;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    border-radius: 16%;
-    filter: drop-shadow(0vw 0vh .5vw rgba(0, 0, 0, .8));
-    transition: all 200ms ease-in-out;
-}
-.phone {
-    height: 15.5vw;
-    width: 8vw;
-    max-width: 360px;
-    border-radius: 12%;
-    filter: drop-shadow(0vw 0vh .3vw rgba(0, 0, 0, .8));
-}
-.site-mobile:hover {
-    cursor: pointer;
-    filter: drop-shadow(0vw 0vh 1vw rgba(0, 0, 0, 1));
-}
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-.site-mobile {
-    background-image: url("../img/form-mobile.png");
-}
-.desktop {
-    background-image: url("../img/form-desktop.png");
-}
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #infos {
     display: flex;
     justify-content: space-evenly;
@@ -222,34 +181,18 @@ body {
     height: 40px;
     left: 20px;
 }
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-.wrapper-descricao {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 60%;
-    border-radius: 1vw;
-    margin: 2vh 0vw;
-    padding: 1vh .5vw;
-    opacity: 0.85;
-    background-color: rgba(0, 0, 0, 0.2);
-    box-shadow: .2vw .1vh 1vh rgba(0, 0, 0, 0.7);
-    border: solid .1vh rgba(0, 0, 0, .2);
-    transition: all 200ms ease-in-out;
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#apresentacao {
+    align-items: flex-start;
 }
-.wrapper-descricao:hover {
-    box-shadow: .2vw .1vh 2vh rgba(0, 0, 0, 1);
-}
-.nome {
+#nome {
     font-size: 21px;
     font-weight: bolder;
     text-shadow: 0 0 .4vw rgba(0, 0, 0, 0.3);
 }
 .topico {
-    font-size: x-large;
+    font-size: large;
     font-weight: bolder;
     text-shadow: 0 0 .4vw rgba(0, 0, 0, 0.3);
 }
@@ -258,8 +201,74 @@ body {
     font-weight: normal;
     text-shadow: 0 0 .4vw rgba(0, 0, 0, 0.5);
 }
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Apresentação dos sites com demonstração de tecnologia dominada
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.wrapper-descricao p{
+    font-size: large;
+    margin: 1vw;
+}
+
+.desktop {
+    display: flex;
+    margin: auto 1vw;
+    background-size: 13vw 14.5vh;
+    background-position: top 1vh center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0vw 0vh .5vw rgba(0, 0, 0, .8));
+}
+.desktop {
+    background-image: url("../img/form-desktop.png");
+}
+
+.site-desktop {
+    height: 22vh;
+    width: 16.3vw;
+    border-radius: 10%;
+    filter: drop-shadow(0vw 0vh .5vw rgba(0, 0, 0, .8));
+    transition: all 200ms ease-in-out;
+}
+.site-desktop:hover {
+    cursor: pointer;
+    filter: drop-shadow(0vw 0vh 1vw rgba(0, 0, 0, 1));
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.site-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 7vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 16%;
+    filter: drop-shadow(0vw 0vh .5vw rgba(0, 0, 0, .8));
+    transition: all 200ms ease-in-out;
+}
+.site-mobile {
+    background-image: url("../img/form-mobile.png");
+}
+
+.phone {
+    height: 15.5vw;
+    width: 8vw;
+    max-width: 360px;
+    border-radius: 12%;
+    filter: drop-shadow(0vw 0vh .3vw rgba(0, 0, 0, .8));
+}
+.site-mobile:hover {
+    cursor: pointer;
+    filter: drop-shadow(0vw 0vh 1vw rgba(0, 0, 0, 1));
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#site-descricao{
+    max-width: 30%;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Contatos e Download
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .icon {
     width: 4vw;
@@ -271,6 +280,11 @@ body {
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+fieldset legend {
+    opacity: .84;
+}
+
 .wrapper-infos {
     display: flex;
     justify-content: space-evenly;
@@ -314,7 +328,6 @@ body {
     width: 100%;
     margin: 2vh auto;
     padding: 2vh 1vw;
-    opacity: .84;
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: .2vw .1vh 1vh rgba(0, 0, 0, 0.7);
     border-radius: 1vw;
@@ -333,7 +346,6 @@ body {
     align-items: center;
     border-radius: 1vw;
     padding: 0vh 1vw;
-    opacity: .9;
     font-weight: bolder;
     font-size: 20px;
     text-shadow: 0 0 .4vw rgba(0, 0, 0, 0.5);
