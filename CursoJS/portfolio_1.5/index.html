@@ -5,26 +5,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>- Prazer, Feliphe Blatt.</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/infos.css">
-    <link rel="stylesheet" href="./assets/css/preview.css">
-    <link rel="stylesheet" href="./assets/css/prints.css">
-    <link rel="stylesheet" href="./assets/css/contato.css">
-    <link rel="stylesheet" href="./assets/css/icon.css">
-    <link rel="stylesheet" href="./assets/css/media.css">
     <link rel="icon" href="./assets/img/pin.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/media.css">
 </head>
 
 <body>
-
     <!--------------------------------------------------------------------------------------------------------------------------->
     <aside id="prancheta" title="Prancheta">
+
         <nav id="secoes">
             <ul>
                 <li><a href="#inicio">Início</a></li>
-                <li title="Exemplo de Landing Page"><a href="#meio">Gestão de Tarefas</a></li>
-                <li title="Exemplo de Formulário e Tabela"><a href="#">Gestão de perfis</a></li>
-                <li title="Exemplo de Redirect Page"><a href="#">Redirect Page</a></li>
+                <li title="Exemplo de Landing Page"><a href="#sites">Gestão de Tarefas</a></li>
+                <li title="Exemplo de Formulário e Tabela"><a href="#sites">Gestão de perfis</a></li>
+                <li title="Exemplo de Redirect Page"><a href="#sites">Redirect Page</a></li>
                 <li title="Contatos"><a href="#contatos">Contato & Downloads</a></li>
             </ul>
         </nav>
@@ -32,9 +27,12 @@
 
     <!--------------------------------------------------------------------------------------------------------------------------->
     <main id="quadro">
+
         <header id="inicio"></header>
 
-        <div id="infos">
+        <fieldset id="infos" class="wrapper-infos">
+        
+            <legend><b>infos:</b></legend>
             
             <figure id="foto-perfil" title="Feliphe Blatt, Foto 3x4.">
                 <a href="#contatos">
@@ -52,12 +50,14 @@
                     <li>Html + Css + Js</li>
                 </ul>
             </fieldset>
-        </div>
+        </fieldset>
 
         <!--------------------------------------------------------------------------------------------------------------------------->
-        <h1 id="meio" class="secao-site">Gestão de tarefas:</h1>
 
-        <div class="exemplo-site">
+        <fieldset id="sites" class="wrapper-sites">
+
+            <legend><b>Gestão de tarefas:</b></legend>
+
             <figure class="desktop">
                 <a target="_blank" href="https://feliphe-blatt.github.io/tarefas/">
                     <img src="./assets/img/notebook.png" class="site-desktop" title="Preview Versão Desktop"
@@ -71,11 +71,11 @@
                         alt="Preview Versão Mobile do Site">
                 </a>
             </figure>
-        </div>
+        </fieldset>
 
         <!--------------------------------------------------------------------------------------------------------------------------->
         <footer id="contatos">
-            <fieldset id="wrapper-principal">
+            <fieldset class="wrapper-principal">
                 <legend><b>Contato & Download:</b></legend>
 
                 <fieldset class="wrapper-contato">
