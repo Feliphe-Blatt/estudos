@@ -158,10 +158,6 @@ fieldset legend {
 #infos {
     display: flex;
     justify-content: space-evenly;
-}
-.wrapper-infos {
-    display: flex;
-    justify-content: space-evenly;
     width: 80%;
     margin: 2vh auto;
     padding: 2vh 1vw;
@@ -174,7 +170,7 @@ fieldset legend {
     text-shadow: 0 0 .4vw rgba(0, 0, 0, 0.5);
     transition: all 200ms ease-in-out;
 }
-.wrapper-infos:hover {
+#infos:hover {
     box-shadow: .2vw .1vh 2vh rgba(0, 0, 0, 1);
 }
 
@@ -214,12 +210,12 @@ fieldset legend {
     font-weight: bolder;
     text-shadow: 0 0 .4vw rgba(0, 0, 0, 0.3);
 }
-.topico {
+#topico {
     font-size: large;
     font-weight: bolder;
     text-shadow: 0 0 .4vw rgba(0, 0, 0, 0.3);
 }
-.detalhes {
+#detalhes {
     font-size: large;
     font-weight: normal;
     text-shadow: 0 0 .4vw rgba(0, 0, 0, 0.5);
@@ -228,7 +224,7 @@ fieldset legend {
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Apresentação dos sites com demonstração de tecnologia dominada
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-.wrapper-sites {
+#sites {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
@@ -243,14 +239,11 @@ fieldset legend {
     text-shadow: 0 0 .4vw rgba(0, 0, 0, 0.5);
     transition: all 200ms ease-in-out;
 }
-.wrapper-sites:hover {
+#sites:hover {
     box-shadow: .2vw .1vh 2vh rgba(0, 0, 0, 1);
 }
-.wrapper-sites p{
-    font-size: large;
-    margin: 1vw;
-}
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .desktop {
     display: flex;
     margin: auto 1vw;
@@ -263,20 +256,20 @@ fieldset legend {
     background-image: url("../img/form-desktop.png");
 }
 
-.site-desktop {
+#site-desktop {
     height: 22vh;
     width: 16.3vw;
     border-radius: 10%;
     filter: drop-shadow(0vw 0vh .5vw rgba(0, 0, 0, .8));
     transition: all 200ms ease-in-out;
 }
-.site-desktop:hover {
+#site-desktop:hover {
     cursor: pointer;
     filter: drop-shadow(0vw 0vh 1vw rgba(0, 0, 0, 1));
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-.site-mobile {
+#site-mobile {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -287,8 +280,12 @@ fieldset legend {
     filter: drop-shadow(0vw 0vh .5vw rgba(0, 0, 0, .8));
     transition: all 200ms ease-in-out;
 }
-.site-mobile {
+#site-mobile {
     background-image: url("../img/form-mobile.png");
+}
+#site-mobile:hover {
+    cursor: pointer;
+    filter: drop-shadow(0vw 0vh 1vw rgba(0, 0, 0, 1));
 }
 
 .phone {
@@ -298,20 +295,20 @@ fieldset legend {
     border-radius: 12%;
     filter: drop-shadow(0vw 0vh .3vw rgba(0, 0, 0, .8));
 }
-.site-mobile:hover {
-    cursor: pointer;
-    filter: drop-shadow(0vw 0vh 1vw rgba(0, 0, 0, 1));
-}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #site-descricao{
     max-width: 30%;
 }
+#descricao{
+    font-size: large;
+    margin: 1vw;
+}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Contatos e Download
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-.wrapper-contato-principal {
+#wrapper-contato-principal {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -327,7 +324,7 @@ fieldset legend {
     text-shadow: 0 0 .4vw rgba(0, 0, 0, 0.5);
     transition: all 200ms ease-in-out;
 }
-.wrapper-contato-principal:hover {
+#wrapper-contato-principal:hover {
     box-shadow: .2vw .1vh 2vh rgba(0, 0, 0, 1);
 }
 .wrapper-contato {
