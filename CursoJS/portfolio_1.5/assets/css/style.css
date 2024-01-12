@@ -20,14 +20,17 @@
     scroll-behavior: smooth !important;
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+html{
+    font-size: 16px;
+}
 body {
-    font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     overflow-x: auto;
     background-color: rgba(0, 0, 0, 0.623);
+    font-family: 'Open Sans', sans-serif;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -38,21 +41,21 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    margin: auto 2vw;
-    height: 28vw;
+    margin: auto 1em;
+    height: fit-content;
     max-height: 290px;
-    width: 26vw;
+    width: fit-content;
     max-width: 270px;
-    border-radius: 6%;
     background-image: url("../img/prancheta.png");
+    border-radius: 6%;
     background-size: cover;
     background-position: top center;
-    border: .1vh solid rgba(0, 0, 0, .4);
-    filter: drop-shadow(0vw 0vh .5vw rgba(0, 0, 0, .8));
+    border: .1em solid rgba(0, 0, 0, .4);
+    filter: drop-shadow(.2em .3em .5em rgba(0, 0, 0, .8));
     transition: all 200ms ease-in-out;
 }
 #prancheta:hover {
-    filter: drop-shadow(0vw 0vh 1vw rgba(0, 0, 0, 1));
+    filter: drop-shadow(.2em .3em 1em rgba(0, 0, 0, 1));
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -60,24 +63,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 3em 1.5em 1.5em 1.5em;
 }
 #secoes li {
-    list-style: none;
-    font-family: sans-serif;
-    font-weight: bolder;
-    font-size: 26px;
-    margin: 3% 0vw;
     position: relative;
-    padding-left: .5vw;
     width: fit-content;
+    margin: 3% 0;
+    padding-left: .5em;
+    list-style: none;
 }
 #secoes a {
     text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    transition: all 200ms ease-in-out;
     color: rgb(50, 0, 0);
-    text-shadow: 0 0 .5vw rgba(0, 0, 0, .5);
+    font-size: 1.2em;
+    font-weight: bold;
+    text-shadow: .1em .2em .4em rgba(0, 0, 0, .5);
+    transition: all 200ms ease-in-out;
 }
 #secoes a::before {
     content: '';
@@ -85,7 +86,7 @@ body {
     bottom: 0;
     left: 0;
     height: 90%;
-    width: .2vw;
+    width: .2em;
     background:rgb(40, 0, 0);
 }
 #secoes a::after {
@@ -94,7 +95,7 @@ body {
     bottom: 0;
     left: 0;
     width: 0%;
-    height: .2vh;
+    height: .1em;
     background:rgb(40, 0, 0);
     transition: all 200ms ease-in-out;
 }
@@ -106,25 +107,25 @@ body {
     Quadro Principal
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #quadro {
-    overflow: auto;
     display: grid;
     align-items: center;
-    padding: 0vh 1vw;
-    margin: 1.5vh auto;
-    width: 66vw;
-    height: 97vh;
+    overflow: auto;
+    margin: 2vh .5em;
+    padding: 0 1em;
+    width: fit-content;
+    height: 96vh;
     background-image:
         radial-gradient(transparent, transparent,rgba(0,0,0, .5) 75%),
         url("../img/pinboard.jpg");
     background-size: cover;
     background-position: left top;
-    border: 2vh solid transparent;
+    border: 1em solid transparent;
+    border-image-source: url("../img/wooden-frame.jpg");
     border-image-slice: 27 27 27 27;
-    border-image-width: 2vh;
+    border-image-width: 1em;
     border-image-outset: 0;
     border-image-repeat: round round;
-    border-image-source: url("../img/wooden-frame.jpg");
-    box-shadow: 0 0 2vw rgba(0, 0, 0, 1);
+    box-shadow: 0 0 1em rgba(0, 0, 0, 1);
     transition: all 100ms ease-in-out;
 }
 
@@ -134,22 +135,22 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    height: 60%;
-    border-radius: 1vw;
-    margin: 2vh 0vw;
-    padding: 1vh .5vw;
-    background-color: rgba(0, 0, 0, 0.2);
-    box-shadow: .2vw .1vh 1vh rgba(0, 0, 0, 0.7);
-    border: solid .1vh rgba(0, 0, 0, .2);
-    transition: all 200ms ease-in-out;
     list-style: inside;
+    padding: .5em;
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: solid .1em rgba(0, 0, 0, .2);
+    border-radius: .5em;
+    box-shadow: .1em .2em .5em rgba(0, 0, 0, 0.7);
+    transition: all 200ms ease-in-out;
 }
 .wrapper-descricao:hover {
-    box-shadow: .2vw .1vh 2vh rgba(0, 0, 0, 1);
+    box-shadow: .1em .2em 1em rgba(0, 0, 0, 1);
 }
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 fieldset legend {
-    opacity: .84;
+    opacity: .9;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -158,20 +159,20 @@ fieldset legend {
 #infos {
     display: flex;
     justify-content: space-evenly;
+    margin: .5em 0;
+    padding: .5em;
     width: 100%;
-    margin: 2vh auto;
-    padding: 2vh 1vw;
     background-color: rgba(0, 0, 0, 0.2);
-    box-shadow: .2vw .1vh 1vh rgba(0, 0, 0, 0.7);
-    border-radius: 1vw;
-    border: solid .1vh rgba(0, 0, 0, .2);
+    border: solid .1em rgba(0, 0, 0, .2);
+    border-radius: .5em;
     font-weight: bold;
-    font-size: 26px;
-    text-shadow: 0 0 .4vw rgba(0, 0, 0, 0.5);
+    font-size: 2em;
+    text-shadow: .1em .2em .4em rgba(0, 0, 0, .5);
+    box-shadow: .1em .2em .5em rgba(0, 0, 0, 0.7);
     transition: all 200ms ease-in-out;
 }
 #infos:hover {
-    box-shadow: .2vw .1vh 2vh rgba(0, 0, 0, 1);
+    box-shadow: .1em .2em 1em rgba(0, 0, 0, 1);
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -179,7 +180,7 @@ fieldset legend {
     background-image: url("../img/profile-pic.jpeg");
     background-size: cover;
     position: relative;
-    margin: 26px 0vw;
+    margin: 26px 0;
     height: 100px;
     width: 75px;
     box-shadow: .2vw .1vh 1vh rgba(0, 0, 0, .7);
@@ -202,9 +203,6 @@ fieldset legend {
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-#margem {
-    padding: 1vw;
-}
 #apresentacao {
     align-items: flex-start;
 }
@@ -231,8 +229,8 @@ fieldset legend {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    margin: 2vh auto;
-    padding: 2vh 1vw;
+    margin: .5em 0;
+    padding: .5em;
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: .2vw .1vh 1vh rgba(0, 0, 0, 0.7);
     border-radius: 1vw;
@@ -249,7 +247,7 @@ fieldset legend {
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .desktop {
     display: flex;
-    margin: auto 1vw;
+    margin: auto .5em;
     background-size: 13vw 14.5vh;
     background-position: top 1vh center;
     background-repeat: no-repeat;
@@ -292,6 +290,7 @@ fieldset legend {
 }
 
 .phone {
+    margin: auto .5em;
     height: 15.5vw;
     width: 8vw;
     max-width: 360px;
@@ -301,12 +300,17 @@ fieldset legend {
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #site-descricao{
+    margin: auto .5em;
     padding: 2vw;
-    max-width: 30%;
+    width: fit-content;
 }
 #descricao{
     font-size: large;
     filter: drop-shadow(.3vw .3vh .3vw rgba(0, 0, 0, .4));
+}
+.observacao{
+    font-size: .5em;
+    color: rgba(0, 0, 0, .9);
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -340,7 +344,7 @@ fieldset legend {
     font-weight: bolder;
     font-size: 20px;
     text-shadow: 0 0 .4vw rgba(0, 0, 0, 0.5);
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
     box-shadow: .2vw .1vh 1vh rgba(0, 0, 0, 0.7);
     border: solid .1vh rgba(0, 0, 0, .2);
     transition: all 200ms ease-in-out;
