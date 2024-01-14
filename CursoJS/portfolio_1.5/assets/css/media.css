@@ -3,23 +3,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 @media (max-width: 760px){
     body {
-        flex-direction: column-reverse;
-    }
-    #quadro {
-        width: 97vw;
-        height: 50vh;
-    }
-    #prancheta {
-        margin: 2vh;
-        height: 56vw;
-        width: 50vw;
-    }
-    #secoes li {
-        font-size: 16px;
-        padding: 1% 0vw;
-    }
-    #secoes li a {
-        font-size: 14px;
+
     }
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -27,57 +11,6 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 @media (max-height: 480px){
     body {
-        flex-direction: row;
-    }
-    #quadro {
-        width: 60vw;
-        height: 97vh;
-    }
-    #prancheta {
-        margin: 2vh;
-        height: 50vw;
-        width: 40vw;
-    }
-    #secoes li {
-        font-size: 16px;
-        padding: 1% 0vw;
-    }
-    #secoes li a {
-        font-size: 16px;
-    }
-}
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-@media (min-width: 721px) {
-    #foto-perfil {
-        height: 133.33px;
-        width: 100px;
-    }
-    #pino-icon {
-        left: 40px;
-        height: 26px;
-    }
-    #pino-icon:hover {
-        height: 40px;
-        left: 30px;
-    }
-}
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-@media (max-width: 460px) {
-    #foto-perfil {
-        height: 100px;
-        width: 75px;
-        margin-right: 1vh;
-    }
-    #pino-icon {
-        left: 30px;
-        height: 26px;
-    }
-    #pino-icon:hover {
-        height: 40px;
-        left: 20px;
+        
     }
 }
