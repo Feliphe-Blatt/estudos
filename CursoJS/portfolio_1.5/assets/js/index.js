@@ -1,31 +1,33 @@
 function escopo() {
     document.addEventListener("DOMContentLoaded", function () {
+        const navInicio = document.getElementById("nav-inicio");
         const navGestaoTarefas = document.getElementById("nav-gestaoTarefas");
         const navRedirectPage = document.getElementById("nav-redirectPage");
+        const navContato = document.getElementById("nav-contato");
 
-        // Function to execute when any of the links is clicked
-        function handleNavLinkClick(event) {
-            // Prevent the default behavior of the anchor link
+        function trocaSite(event) {
             event.preventDefault();
 
-            // Get the href attribute to determine which link was clicked
             const linkId = event.target.getAttribute("id");
 
-            // Execute different actions based on the clicked link
-            if (linkId === "nav-gestaoTarefas") {
-                // Execute function for "Gestão de Tarefas"
-                console.log("Gestão de Tarefas link clicked");
+            if (linkId === "nav-inicio") {
+                console.log("Início");
 
-            }else if (linkId === "nav-redirectPage") {
-                // Execute function for "Redirect Page"
-                console.log("Redirect Page link clicked");
+            } else if (linkId === "nav-gestaoTarefas") {
+                console.log("Gestão de Tarefas");
+
+            } else if (linkId === "nav-redirectPage") {
+                console.log("Redirect Page");
+                
+            } else if (linkId === "nav-contato") {
+                console.log("Contato");
             }
         }
 
-        // Add click event listeners to the links
-        navGestaoTarefas.addEventListener("click", handleNavLinkClick);
-        navRedirectPage.addEventListener("click", handleNavLinkClick);
+        navInicio.addEventListener("click", trocaSite);
+        navGestaoTarefas.addEventListener("click", trocaSite);
+        navRedirectPage.addEventListener("click", trocaSite);
+        navContato.addEventListener("click", trocaSite);
     });
-
 }
 escopo();
