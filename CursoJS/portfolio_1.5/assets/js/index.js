@@ -19,8 +19,6 @@ function escopo() {
             } else if (linkId === "nav-redirectPage") {
                 console.log("Redirect Page");
                 
-            } else if (linkId === "nav-contato") {
-                console.log("Contato");
             }
         }
 
