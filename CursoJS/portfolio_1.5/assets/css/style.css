@@ -1,6 +1,45 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Configuração geral
+    Estilos padrão para telas maiores que 1200px
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+:root {
+    --fonte-padrao: 'Roboto', sans-serif;
+    --fonte-titulo: 'Montserrat', sans-serif;
+
+    --display-infos: flex;
+    --display-sites: none;
+
+    --url-prancheta: url("../img/prancheta.png");
+    --url-fundo-quadro: url("../img/pinboard.jpg");
+    --url-borda-imagem: url("../img/wooden-frame.jpg");
+    --url-foto-perfil: url("../img/profile-pic.jpeg");
+    --url-tarefas-desktop: url("../img/task-desktop.png");
+    --url-tarefas-mobile: url("../img/task-mobile.png");
+
+    --tamanho-fonte-geral: 1.3rem;
+    --tamanho-fonte-detalhes: 1.3rem;
+    --tamanho-fonte-titulo: 2rem;
+    --tamanho-fonte-subtitulo: 1.4rem;
+    --tamanho-fonte-observacao: 1.1rem;
+    --tamanho-fonte-contato: 1.4rem;
+
+    --fundo-padrao: rgba(0, 0, 0, 0.2);
+    --borda-padrao: solid .1vw rgba(0, 0, 0, .2);
+    --radial-padrao: radial-gradient(rgba(0,0,0, .1), rgba(0,0,0, .1),rgba(0,0,0, .1) 99%);
+    --transicao-padrao: all 120ms ease-in-out;
+    
+    --link-cor-padrao: rgba(40, 0, 0, 1);
+    --link-tamanho-padrao: 1.2rem;
+
+    --sombra-box-padrao: .1vw .1vw .5vw rgba(0, 0, 0, 0.7);
+    --sombra-box-expand: .1vw .1vw 1vw rgba(0, 0, 0, 1);
+
+    --sombra-texto-padrao: .1em .1em .3em rgba(0, 0, 0, 0.3);
+    --sombra-texto-destaque: .1em .1em .3em rgba(97, 97, 97, 0.3);
+
+    --sombra-especial: drop-shadow(.1vw .1vw .5vw rgba(0, 0, 0, .7));
+    --sombra-especial-expand: drop-shadow(.1vw .1vw 1vw rgba(0, 0, 0, 1));
+}
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -29,7 +68,7 @@ body {
     align-items: center;
     overflow-x: auto;
     background-color: rgba(0, 0, 0, 0.623);
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--fonte-padrao);
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -43,26 +82,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1em;
+    white-space: nowrap;
     height: fit-content;
-    max-height: 290px;
     width: fit-content;
-    max-width: 270px;
-    background-image: radial-gradient(rgba(0,0,0, .1), rgba(0,0,0, .1),rgba(0,0,0, .1) 99%),
-                         url("../img/prancheta.png");
+    margin: 1vw;
+    background-image: var(--radial-padrao), var(--url-prancheta);
     border-radius: 6%;
     background-size: cover;
     background-position: top center;
-    border: .1em solid rgba(0, 0, 0, .4);
-    filter: drop-shadow(.1em .1em .5em rgba(0, 0, 0, .7));
-    transition: 
-        filter 200ms ease-in-out,
-        transform 200ms ease-in-out;
+    border: .1vw solid rgba(0, 0, 0, .4);
+    filter: var(--sombra-especial);
+    transition: filter 200ms ease-in-out, transform 200ms ease-in-out;
 }
 #prancheta:hover {
-    transform: scale(1.05);
-    filter: drop-shadow(.1em .1em 1em rgba(0, 0, 0, 1));
     cursor: grab;
+    transform: scale(1.05);
+    filter: var(--sombra-especial-expand);
 }
 #prancheta:active{
     cursor: grabbing;
@@ -83,18 +118,18 @@ body {
     margin: 3% 0;
     padding-left: .5em;
     list-style: none;
-    transition: all 200ms ease-in-out;
+    transition: var(--transicao-padrao);
 }
 #secoes li:hover {
-    transform: scale(1.1) translate(2%, 0%);
+    transform: scale(1.1);
 }
 #secoes a {
     text-decoration: none;
-    color: rgba(40, 0, 0, 1);
-    font-size: 1.2rem;
+    color: var(--link-cor-padrao);
+    font-size: var(--link-tamanho-padrao);
     font-weight: bold;
     text-shadow: .1em .1em .4em rgba(58, 58, 58, 0.7);
-    transition: all 200ms ease-in-out;
+    transition: var(--transicao-padrao);
 }
 #secoes a::before {
     content: '';
@@ -102,9 +137,9 @@ body {
     bottom: 0;
     left: 0;
     height: 0%;
-    width: .2em;
+    width: .1vw;
     background:rgb(40, 0, 0);
-    transition: all 200ms ease-in-out;
+    transition: var(--transicao-padrao);
 }
 #secoes a::after {
     content: '';
@@ -112,9 +147,9 @@ body {
     bottom: 0;
     left: 0;
     width: 0%;
-    height: .1em;
+    height: .1vw;
     background:rgb(40, 0, 0);
-    transition: all 200ms ease-in-out;
+    transition: var(--transicao-padrao);
 }
 #secoes a:hover{
     color: rgba(60, 0, 0, 1);
@@ -137,23 +172,21 @@ body {
     align-items: center;
     justify-content: center;
     overflow: auto;
-    margin: 3vh .5em;
-    padding: 0 1em;
-    width: 80%;
+    margin: 3vh auto;
+    padding: 0 9px;
     height: 94vh;
-    background-image:
-        radial-gradient(transparent, transparent,rgba(0,0,0, .5) 75%),
-        url("../img/pinboard.jpg");
+    width: 86vw;
+    background-image: radial-gradient(transparent, transparent,rgba(0,0,0, .5) 75%), var(--url-fundo-quadro);
     background-size: cover;
     background-position: left top;
-    border: 1em solid transparent;
-    border-image-source: url("../img/wooden-frame.jpg");
+    border: 1vw solid transparent;
+    border-image-source: var(--url-borda-imagem);
     border-image-slice: 27 27 27 27;
-    border-image-width: 1em;
+    border-image-width: 1vw;
     border-image-outset: 0;
     border-image-repeat: round round;
-    box-shadow: 0 0 1em rgba(0, 0, 0, 1);
-    transition: all 100ms ease-in-out;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 1);
+    transition: var(--transicao-padrao);
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -161,74 +194,73 @@ body {
     display: flex;
     flex-direction: column;
     list-style: inside;
-    padding: .5em;
-    background-color: rgba(0, 0, 0, 0.2);
-    border: solid .1em rgba(0, 0, 0, .2);
+    padding: .5vw;
+    background-color: var(--fundo-padrao);
+    border: var(--borda-padrao);
     border-radius: .5em;
-    box-shadow: .1em .1em .5em rgba(0, 0, 0, 0.7);
-    transition: all 200ms ease-in-out;
+    box-shadow: var(--sombra-box-padrao);
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-fieldset legend {
-    color: rgba(0, 0, 0, .9);
-    text-shadow: .1em .1em .3em rgba(97, 97, 97, 0.3);
+fieldset legend, .topico {
+    font-family: var(--fonte-titulo);
+    color: rgba(0, 0, 0, .98);
+    text-shadow: var(--sombra-texto-destaque);
 }
 .detalhes {
-    font-size: 1rem;
-    font-weight: bold;
-    text-shadow: .1em .1em .3em rgba(0, 0, 0, 0.3);
+    font-size: var(--tamanho-fonte-geral);
+    text-shadow: var(--sombra-texto-padrao);
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .destaque{
     font-weight: bolder;
-    text-shadow: .1em .1em .3em rgba(97, 97, 97, 0.3);
+    text-shadow: var(--sombra-texto-destaque);
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Apresentação de conhecimentos
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #infos {
-    display: flex;
+    display: var(--display-infos);
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    margin: .5em 0;
-    padding: .5em;
+    justify-content: space-evenly;
+    margin: .5vw 0;
+    padding: .5vw;
     width: 98%;
-    background-color: rgba(0, 0, 0, 0.2);
-    border: solid .1em rgba(0, 0, 0, .2);
+    background-color: var(--fundo-padrao);
+    border: var(--borda-padrao);
     border-radius: .5em;
-    font-size: 2rem;
+    font-size: var(--tamanho-fonte-titulo);
     font-weight: bolder;
-    text-shadow: .1em .1em .3em rgba(0, 0, 0, .3);
-    box-shadow: .1em .1em .5em rgba(0, 0, 0, 0.7);
-    transition: all 200ms ease-in-out;
+    text-shadow: var(--sombra-texto-padrao);
+    box-shadow: var(--sombra-box-padrao);
+    transition: var(--transicao-padrao);
 }
 #infos:hover {
-    box-shadow: .1em .1em 1em rgba(0, 0, 0, 1);
+    box-shadow: var(--sombra-box-expand);
 }
 #apresentacao-geral {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: .5em;
+    margin: .5vw;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #foto-perfil {
-    background-image: radial-gradient(rgba(0,0,0, .1), rgba(0,0,0, .1),rgba(0,0,0, .1) 99%),
-                        url("../img/profile-pic.jpeg");
+    background-image: var(--radial-padrao),
+                        var(--url-foto-perfil);
     background-size: cover;
     position: relative;
-    margin: 1em;
+    margin: 1vw;
     height: 150px;
     width: 112.5px;
-    box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
-    transition: all 200ms ease-in-out;
+    box-shadow: 0 0 .5vw rgba(0, 0, 0, .8);
+    transition: var(--transicao-padrao);
 }
 #foto-perfil:hover {
-    box-shadow: 0 0 1em rgba(0, 0, 0, 1);
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 1);
     transform: scale(1.1);
 }
 #pino-icon {
@@ -236,36 +268,33 @@ fieldset legend {
     top: -16px;
     left: 50px;
     width: 30px;
-    filter: drop-shadow(0 0 .5rem rgba(0, 0, 0, 1));
-    transition: all 200ms ease-in-out;
+    filter: drop-shadow(0 0 .5vw rgba(0, 0, 0, 1));
+    transition: var(--transicao-padrao);
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #geral{
-    width: 50%;
-    margin: auto .5em;
-    font-size: 1.1rem;
+    width: 70%;
+    margin: auto .5vw;
 }
 #texto-geral{
-    padding: .5em;
+    padding: .5vw;
+    font-size: var(--tamanho-fonte-geral);
 }
 #apresentacao-dev {
     display: flex;
     flex-direction: column;
-    
 }
 .topico {
-    font-size: 1.4rem;
-    font-weight: bold;
-    text-shadow: .1em .1em .3em rgba(44, 44, 44, 0.7);
+    font-size: var(--tamanho-fonte-titulo);
 }
 .subTopico{
     display: flex;
     justify-content: space-evenly;
-    padding: .5em;
+    padding: .5vw;
 }
 #back legend, #front legend, #geral legend {
-    font-size: .7em;
+    font-size: var(--tamanho-fonte-subtitulo);
     text-shadow: .1em .1em .3em rgba(44, 44, 44, 0.7);
 }
 
@@ -273,30 +302,30 @@ fieldset legend {
     Apresentação dos sites com demonstração de tecnologia dominada
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #sites {
-    display: none;
+    display: var(--display-sites);
     justify-content: space-evenly;
     width: 98%;
-    margin: .5em 0;
-    padding: .5em;
-    background-color: rgba(0, 0, 0, 0.2);
-    box-shadow: .1em .1em .5em rgba(0, 0, 0, 0.7);
-    border-radius: .5em;
-    border: solid .1em rgba(0, 0, 0, .2);
+    margin: .5vw 0;
+    padding: .5vw;
+    background-color: var(--fundo-padrao);
+    box-shadow: var(--sombra-box-padrao);
+    border-radius: .5vw;
+    border: var(--borda-padrao);
     font-weight: bolder;
-    font-size: 2rem;
-    text-shadow: .1em .1em .3em rgba(0, 0, 0, 0.3);
-    transition: all 200ms ease-in-out;
+    font-size: var(--tamanho-fonte-titulo);
+    text-shadow: var(--sombra-texto-padrao);
+    transition: var(--transicao-padrao);
 }
 #sites:hover {
-    box-shadow: .1em .1em 1em rgba(0, 0, 0, 1);
+    box-shadow: var(--sombra-box-expand);
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .site-desktop {
     display: flex;
-    margin: auto .5em;
+    margin: auto .5vw;
 
-    background-image: url("../img/task-desktop.png");
+    background-image: var(--url-tarefas-desktop);
     background-size: 7.55em 4.3em;
     background-repeat: no-repeat;
     background-position: top .26em center;
@@ -304,12 +333,12 @@ fieldset legend {
 
 #desktop {
     width: 9.5em;
-    filter: drop-shadow(.1em .1em .5em rgba(0, 0, 0, .7));
-    transition: all 200ms ease-in-out;
+    filter: var(--sombra-especial);
+    transition: var(--transicao-padrao);
 }
 #desktop:hover {
     cursor: pointer;
-    filter: drop-shadow(.1em .1em 1em rgba(0, 0, 0, .9));
+    filter: var(--sombra-especial-expand);
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -318,31 +347,31 @@ fieldset legend {
     justify-content: center;
     align-items: center;
 
-    background-image: url("../img/task-mobile.png");
+    background-image: var(--url-tarefas-mobile);
     background-size: 4.1em 8.64em;
     background-repeat: no-repeat;
     background-position: top .28em center;
 }
 
 .phone {
-    margin: auto .5em;
+    margin: auto .5vw;
     height: 9.1em;
     width: 4.6em;
-    filter: drop-shadow(.1em .1em .5em rgba(0, 0, 0, .7));
-    transition: all 200ms ease-in-out;
+    filter: var(--sombra-especial);
+    transition: var(--transicao-padrao);
 }
 .phone:hover {
     cursor: pointer;
-    filter: drop-shadow(.1em .1em 1em rgba(0, 0, 0, .9));
+    filter: var(--sombra-especial-expand);
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #site-descricao{
-    margin: auto .5em;
-    padding: .5em;
+    margin: auto .5vw;
+    padding: .5vw;
 }
 .observacao{
-    font-size: .8rem;
+    font-size: var(--tamanho-fonte-observacao);
     color: rgba(0, 0, 0, .9);
 }
 
@@ -353,35 +382,35 @@ fieldset legend {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: .5em 0;
-    padding: .5em;
+    margin: .5vw 0;
+    padding: .5vw;
     width: 98%;
-    background-color: rgba(0, 0, 0, 0.2);
-    box-shadow: .1em .1em .5em rgba(0, 0, 0, 0.7);
-    border-radius: .5em;
-    border: solid .1em rgba(0, 0, 0, .2);
-    font-size: 2rem;
+    background-color: var(--fundo-padrao);
+    box-shadow: var(--sombra-box-padrao);
+    border-radius: .5vw;
+    border: var(--borda-padrao);
+    font-size: var(--tamanho-fonte-titulo);
     font-weight: bolder;
-    text-shadow: .1em .1em .3em rgba(0, 0, 0, 0.3);
-    transition: all 200ms ease-in-out;
+    text-shadow: var(--sombra-texto-padrao);
+    transition: var(--transicao-padrao);
 }
 #wrapper-contato-principal:hover {
-    box-shadow: .1em .1em 1em rgba(0, 0, 0, 1);
+    box-shadow: var(--sombra-box-expand);
 }
 .wrapper-contato {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: .5em;
-    border: solid .1em rgba(0, 0, 0, 0);
+    padding: .5vw;
+    border: solid .1vw rgba(0, 0, 0, 0);
     background-color: rgba(0, 0, 0, 0);
-    font-size: 1.4rem;
+    font-size: var(--tamanho-fonte-contato);
     font-weight: bold;
-    text-shadow: .1em .1em .3em rgba(0, 0, 0, 0.3);
+    text-shadow: var(--sombra-texto-padrao);
 }
 .icon {
-    width: 2em;
+    width: 4em;
     max-height: 200px;
     max-width: 150px;
-    filter: drop-shadow(.1em .1em .3em rgba(0, 0, 0, 1));
+    filter: drop-shadow(.1vw .1vw .3vw rgba(0, 0, 0, 1));
 }
