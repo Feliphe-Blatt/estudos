@@ -203,6 +203,7 @@ body {
 .wrapper-descricao {
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     list-style: inside;
     padding: .5vw;
     background-color: var(--fundo-padrao);
