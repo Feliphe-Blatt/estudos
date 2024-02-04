@@ -16,26 +16,26 @@
     --url-tarefas-desktop: url("../img/task-desktop.png");
     --url-tarefas-mobile: url("../img/task-mobile.png");
 
-    --tamanho-fonte-geral: 1.3rem;
-    --tamanho-fonte-detalhes: 1.3rem;
-    --tamanho-fonte-titulo: 2rem;
-    --tamanho-fonte-subtitulo: 1.4rem;
-    --tamanho-fonte-observacao: 1.1rem;
-    --tamanho-fonte-contato: 1.4rem;
+    --fonte-geral: 1.3rem;
+    --fonte-detalhes: 1.3rem;
+    --fonte-titulo: 2rem;
+    --fonte-subtitulo: 1.4rem;
+    --fonte-observacao: 1.1rem;
+    --fonte-contato: 1.4rem;
+    
+    --sombra-texto-padrao: .1em .1em .3em rgba(0, 0, 0, 0.3);
+    --sombra-texto-destaque: .1em .1em .3em rgba(97, 97, 97, 0.3);
+
+    --link-tamanho-padrao: 1.2rem;
+    --link-cor-padrao: rgba(40, 0, 0, 1);
 
     --fundo-padrao: rgba(0, 0, 0, 0.2);
     --borda-padrao: solid .1vw rgba(0, 0, 0, .2);
     --radial-padrao: radial-gradient(rgba(0,0,0, .1), rgba(0,0,0, .1),rgba(0,0,0, .1) 99%);
     --transicao-padrao: all 120ms ease-in-out;
     
-    --link-cor-padrao: rgba(40, 0, 0, 1);
-    --link-tamanho-padrao: 1.2rem;
-
     --sombra-box-padrao: .1vw .1vw .5vw rgba(0, 0, 0, 0.7);
     --sombra-box-expand: .1vw .1vw 1vw rgba(0, 0, 0, 1);
-
-    --sombra-texto-padrao: .1em .1em .3em rgba(0, 0, 0, 0.3);
-    --sombra-texto-destaque: .1em .1em .3em rgba(97, 97, 97, 0.3);
 
     --sombra-especial: drop-shadow(.1vw .1vw .5vw rgba(0, 0, 0, .7));
     --sombra-especial-expand: drop-shadow(.1vw .1vw 1vw rgba(0, 0, 0, 1));
@@ -208,7 +208,7 @@ fieldset legend, .topico {
     text-shadow: var(--sombra-texto-destaque);
 }
 .detalhes {
-    font-size: var(--tamanho-fonte-geral);
+    font-size: var(--fonte-geral);
     text-shadow: var(--sombra-texto-padrao);
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -231,7 +231,7 @@ fieldset legend, .topico {
     background-color: var(--fundo-padrao);
     border: var(--borda-padrao);
     border-radius: .5em;
-    font-size: var(--tamanho-fonte-titulo);
+    font-size: var(--fonte-titulo);
     font-weight: bolder;
     text-shadow: var(--sombra-texto-padrao);
     box-shadow: var(--sombra-box-padrao);
@@ -279,14 +279,14 @@ fieldset legend, .topico {
 }
 #texto-geral{
     padding: .5vw;
-    font-size: var(--tamanho-fonte-geral);
+    font-size: var(--fonte-geral);
 }
 #apresentacao-dev {
     display: flex;
     flex-direction: column;
 }
 .topico {
-    font-size: var(--tamanho-fonte-titulo);
+    font-size: var(--fonte-titulo);
 }
 .subTopico{
     display: flex;
@@ -294,7 +294,7 @@ fieldset legend, .topico {
     padding: .5vw;
 }
 #back legend, #front legend, #geral legend {
-    font-size: var(--tamanho-fonte-subtitulo);
+    font-size: var(--fonte-subtitulo);
     text-shadow: .1em .1em .3em rgba(44, 44, 44, 0.7);
 }
 
@@ -312,7 +312,7 @@ fieldset legend, .topico {
     border-radius: .5vw;
     border: var(--borda-padrao);
     font-weight: bolder;
-    font-size: var(--tamanho-fonte-titulo);
+    font-size: var(--fonte-titulo);
     text-shadow: var(--sombra-texto-padrao);
     transition: var(--transicao-padrao);
 }
@@ -371,7 +371,7 @@ fieldset legend, .topico {
     padding: .5vw;
 }
 .observacao{
-    font-size: var(--tamanho-fonte-observacao);
+    font-size: var(--fonte-observacao);
     color: rgba(0, 0, 0, .9);
 }
 
@@ -389,7 +389,7 @@ fieldset legend, .topico {
     box-shadow: var(--sombra-box-padrao);
     border-radius: .5vw;
     border: var(--borda-padrao);
-    font-size: var(--tamanho-fonte-titulo);
+    font-size: var(--fonte-titulo);
     font-weight: bolder;
     text-shadow: var(--sombra-texto-padrao);
     transition: var(--transicao-padrao);
@@ -404,7 +404,7 @@ fieldset legend, .topico {
     padding: .5vw;
     border: solid .1vw rgba(0, 0, 0, 0);
     background-color: rgba(0, 0, 0, 0);
-    font-size: var(--tamanho-fonte-contato);
+    font-size: var(--fonte-contato);
     font-weight: bold;
     text-shadow: var(--sombra-texto-padrao);
 }
