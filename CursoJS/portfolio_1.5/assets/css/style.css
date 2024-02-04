@@ -1,6 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Configuração geral
-    Estilos padrão para telas maiores que 1200px
+    Configuração geral das variáveis
+    Estilo padrão para larguras maiores que 1200px
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 :root {
     --fonte-padrao: 'Roboto', sans-serif;
@@ -19,7 +19,7 @@
     --fonte-geral: 1.3rem;
     --fonte-detalhes: 1.3rem;
     --fonte-titulo: 2rem;
-    --fonte-subtitulo: 1.4rem;
+    --fonte-subtitulo: 1.5rem;
     --fonte-observacao: 1.1rem;
     --fonte-contato: 1.4rem;
     
@@ -40,6 +40,9 @@
     --sombra-especial: drop-shadow(.1vw .1vw .5vw rgba(0, 0, 0, .7));
     --sombra-especial-expand: drop-shadow(.1vw .1vw 1vw rgba(0, 0, 0, 1));
 }
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Smooth scroll e setup básico
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -58,7 +61,6 @@
     box-sizing: border-box;
     scroll-behavior: smooth !important;
 }
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 html{
     font-size: 16px;
 }
@@ -106,7 +108,9 @@ body {
     position: relative;
 }
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Seções do site
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #secoes {
     display: flex;
     justify-content: center;
@@ -131,6 +135,14 @@ body {
     text-shadow: .1em .1em .4em rgba(58, 58, 58, 0.7);
     transition: var(--transicao-padrao);
 }
+#secoes a:hover{
+    color: rgba(60, 0, 0, 1);
+    text-shadow: .1em .1em .4em rgba(71, 71, 71, 0.7);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Efeito no link do menu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #secoes a::before {
     content: '';
     position: absolute;
@@ -151,10 +163,6 @@ body {
     background:rgb(40, 0, 0);
     transition: var(--transicao-padrao);
 }
-#secoes a:hover{
-    color: rgba(60, 0, 0, 1);
-    text-shadow: .1em .1em .4em rgba(71, 71, 71, 0.7);
-}
 #secoes a:hover::after {
     width: 100%;
 }
@@ -170,7 +178,7 @@ body {
     position: relative;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     overflow: auto;
     margin: 3vh auto;
     padding: 0 9px;
@@ -189,7 +197,9 @@ body {
     transition: var(--transicao-padrao);
 }
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Descrições gerais
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .wrapper-descricao {
     display: flex;
     flex-direction: column;
@@ -201,7 +211,9 @@ body {
     box-shadow: var(--sombra-box-padrao);
 }
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Títulos gerais
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 fieldset legend, .topico {
     font-family: var(--fonte-titulo);
     color: rgba(0, 0, 0, .98);
@@ -211,7 +223,9 @@ fieldset legend, .topico {
     font-size: var(--fonte-geral);
     text-shadow: var(--sombra-texto-padrao);
 }
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Destaques
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .destaque{
     font-weight: bolder;
     text-shadow: var(--sombra-texto-destaque);
@@ -247,7 +261,9 @@ fieldset legend, .topico {
     margin: .5vw;
 }
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Foto de perfil
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #foto-perfil {
     background-image: var(--radial-padrao),
                         var(--url-foto-perfil);
@@ -272,7 +288,9 @@ fieldset legend, .topico {
     transition: var(--transicao-padrao);
 }
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Apresentação Perfil
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #geral{
     width: 70%;
     margin: auto .5vw;
@@ -320,7 +338,9 @@ fieldset legend, .topico {
     box-shadow: var(--sombra-box-expand);
 }
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Preview versão Desktop
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .site-desktop {
     display: flex;
     margin: auto .5vw;
@@ -341,7 +361,9 @@ fieldset legend, .topico {
     filter: var(--sombra-especial-expand);
 }
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Preview versão Mobile
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #site-mobile {
     display: flex;
     justify-content: center;
@@ -365,7 +387,9 @@ fieldset legend, .topico {
     filter: var(--sombra-especial-expand);
 }
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Descrição do site
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #site-descricao{
     margin: auto .5vw;
     padding: .5vw;
@@ -378,7 +402,7 @@ fieldset legend, .topico {
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Contatos e Download
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-#wrapper-contato-principal {
+#contatos {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -394,7 +418,7 @@ fieldset legend, .topico {
     text-shadow: var(--sombra-texto-padrao);
     transition: var(--transicao-padrao);
 }
-#wrapper-contato-principal:hover {
+#contatos:hover {
     box-shadow: var(--sombra-box-expand);
 }
 .wrapper-contato {
