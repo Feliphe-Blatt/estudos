@@ -3,8 +3,8 @@
     Estilo padrão para larguras maiores que 1200px
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 :root {
-    --fonte-padrao: 'Roboto', sans-serif;
-    --fonte-titulo: 'Montserrat', sans-serif;
+    --estilo-fonte-padrao: 'Roboto', sans-serif;
+    --estilo-fonte-titulo: 'Montserrat', sans-serif;
 
     --display-infos: flex;
     --display-sites: none;
@@ -16,15 +16,20 @@
     --url-tarefas-desktop: url("../img/task-desktop.png");
     --url-tarefas-mobile: url("../img/task-mobile.png");
 
+    --fonte-titulo: 2rem;
     --fonte-geral: 1.3rem;
     --fonte-detalhes: 1.3rem;
-    --fonte-titulo: 2rem;
     --fonte-subtitulo: 1.5rem;
     --fonte-observacao: 1.1rem;
     --fonte-contato: 1.4rem;
+
+    --destaque-maximo: 900;
+    --destaque-alto: 800;
+    --destaque-medio: 700;
+    --destaque-normal: 550;
     
     --sombra-texto-padrao: .1em .1em .3em rgba(0, 0, 0, 0.3);
-    --sombra-texto-destaque: .1em .1em .3em rgba(97, 97, 97, 0.3);
+    --sombra-texto-destaque: 1px 1px 1px rgb(39, 39, 39);
 
     --link-tamanho-padrao: 1.2rem;
     --link-cor-padrao: rgba(40, 0, 0, 1);
@@ -70,7 +75,8 @@ body {
     align-items: center;
     overflow-x: auto;
     background-color: rgba(0, 0, 0, 0.623);
-    font-family: var(--fonte-padrao);
+    font-family: var(--estilo-fonte-padrao);
+    letter-spacing: .5px;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -131,7 +137,7 @@ body {
     text-decoration: none;
     color: var(--link-cor-padrao);
     font-size: var(--link-tamanho-padrao);
-    font-weight: bold;
+    font-weight: var(--destaque-maximo);
     text-shadow: .1em .1em .4em rgba(58, 58, 58, 0.7);
     transition: var(--transicao-padrao);
 }
@@ -210,26 +216,31 @@ body {
     border: var(--borda-padrao);
     border-radius: .5em;
     box-shadow: var(--sombra-box-padrao);
+    font-weight: var(--destaque-normal);
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Títulos gerais
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 fieldset legend, .topico {
-    font-family: var(--fonte-titulo);
+    font-family: var(--estilo-fonte-titulo);
     color: rgba(0, 0, 0, .98);
-    text-shadow: var(--sombra-texto-destaque);
+    font-weight: var(--destaque-medio);
+    letter-spacing: 1.5px;
+    text-shadow: var(--sombra-texto-destaque), var(--sombra-texto-padrao);
 }
 .detalhes {
     font-size: var(--fonte-geral);
+    letter-spacing: 2px;
     text-shadow: var(--sombra-texto-padrao);
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Destaques
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .destaque{
-    font-weight: bolder;
-    text-shadow: var(--sombra-texto-destaque);
+    font-weight: var(--destaque-alto);
+    letter-spacing: 1.5px;
+    text-shadow: var(--sombra-texto-destaque), var(--sombra-texto-padrao);
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -247,7 +258,6 @@ fieldset legend, .topico {
     border: var(--borda-padrao);
     border-radius: .5em;
     font-size: var(--fonte-titulo);
-    font-weight: bolder;
     text-shadow: var(--sombra-texto-padrao);
     box-shadow: var(--sombra-box-padrao);
     transition: var(--transicao-padrao);
@@ -299,6 +309,7 @@ fieldset legend, .topico {
 #texto-geral{
     padding: .5vw;
     font-size: var(--fonte-geral);
+    line-height: 1.6;
 }
 #apresentacao-dev {
     display: flex;
@@ -330,7 +341,6 @@ fieldset legend, .topico {
     box-shadow: var(--sombra-box-padrao);
     border-radius: .5vw;
     border: var(--borda-padrao);
-    font-weight: bolder;
     font-size: var(--fonte-titulo);
     text-shadow: var(--sombra-texto-padrao);
     transition: var(--transicao-padrao);
@@ -415,7 +425,6 @@ fieldset legend, .topico {
     border-radius: .5vw;
     border: var(--borda-padrao);
     font-size: var(--fonte-titulo);
-    font-weight: bolder;
     text-shadow: var(--sombra-texto-padrao);
     transition: var(--transicao-padrao);
 }
@@ -430,7 +439,6 @@ fieldset legend, .topico {
     border: solid .1vw rgba(0, 0, 0, 0);
     background-color: rgba(0, 0, 0, 0);
     font-size: var(--fonte-contato);
-    font-weight: bold;
     text-shadow: var(--sombra-texto-padrao);
 }
 .icon {
