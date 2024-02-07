@@ -25,7 +25,6 @@ function escopo() {
         navInicio.addEventListener("click", trocaSite);
         navGestaoTarefas.addEventListener("click", trocaSite);
         navRedirectPage.addEventListener("click", trocaSite);
-        navContato.addEventListener("click", trocaSite);
     });
 }
 escopo();

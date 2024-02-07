@@ -34,6 +34,7 @@
     --link-tamanho-padrao: 1.2rem;
     --link-cor-padrao: rgba(40, 0, 0, 1);
 
+    --espaco-padrao: max(.5vw,.5vh);
     --fundo-padrao: rgba(0, 0, 0, 0.2);
     --borda-padrao: solid .1vw rgba(0, 0, 0, .2);
     --radial-padrao: radial-gradient(rgba(0,0,0, .1), rgba(0,0,0, .1),rgba(0,0,0, .1) 99%);
@@ -78,14 +79,17 @@ body {
     font-family: var(--estilo-fonte-padrao);
     letter-spacing: .5px;
 }
+#inicio {
+    height: 0;
+    width: 100%;
+}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Prancheta onde fica o "menu" do site
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #prancheta {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    inset: auto 0 0 auto;
     z-index: 10;
     display: flex;
     justify-content: center;
@@ -93,7 +97,7 @@ body {
     white-space: nowrap;
     height: fit-content;
     width: fit-content;
-    margin: 1vw;
+    margin: max(1vw,1vh);
     background-image: var(--radial-padrao), var(--url-prancheta);
     border-radius: 6%;
     background-size: cover;
@@ -121,7 +125,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 3em 1.5em 1.5em 1.5em;
+    margin: 3em 1.5em 1.5em;
 }
 #secoes li {
     width: fit-content;
@@ -180,15 +184,15 @@ body {
     Quadro Principal
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #quadro {
-    display: flex;
     position: relative;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     overflow: auto;
-    margin: 3vh auto;
+    margin: 3dvh auto;
     padding: 0 9px;
-    height: 94vh;
+    height: 94dvh;
     width: 86vw;
     background-image: radial-gradient(transparent, transparent,rgba(0,0,0, .5) 75%), var(--url-fundo-quadro);
     background-size: cover;
@@ -211,7 +215,7 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     list-style: inside;
-    padding: .5vw;
+    padding: var(--espaco-padrao);
     background-color: var(--fundo-padrao);
     border: var(--borda-padrao);
     border-radius: .5em;
@@ -251,9 +255,8 @@ fieldset legend, .topico {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    margin: .5vw 0;
-    padding: .5vw;
-    width: 98%;
+    padding: var(--espaco-padrao);
+    width: 100%;
     background-color: var(--fundo-padrao);
     border: var(--borda-padrao);
     border-radius: .5em;
@@ -267,9 +270,10 @@ fieldset legend, .topico {
 }
 #apresentacao-geral {
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    margin: .5vw;
+    margin: var(--espaco-padrao);
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -280,7 +284,7 @@ fieldset legend, .topico {
                         var(--url-foto-perfil);
     background-size: cover;
     position: relative;
-    margin: 1vw;
+    margin: max(1vw,1vh);
     height: 150px;
     width: 112.5px;
     box-shadow: 0 0 .5vw rgba(0, 0, 0, .8);
@@ -304,10 +308,9 @@ fieldset legend, .topico {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #geral{
     width: 70%;
-    margin: auto .5vw;
 }
 #texto-geral{
-    padding: .5vw;
+    padding: var(--espaco-padrao);
     font-size: var(--fonte-geral);
     line-height: 1.6;
 }
@@ -321,7 +324,7 @@ fieldset legend, .topico {
 .subTopico{
     display: flex;
     justify-content: space-evenly;
-    padding: .5vw;
+    padding: var(--espaco-padrao);
 }
 #back legend, #front legend, #geral legend {
     font-size: var(--fonte-subtitulo);
@@ -334,8 +337,7 @@ fieldset legend, .topico {
 #sites {
     display: var(--display-sites);
     justify-content: space-evenly;
-    width: 98%;
-    margin: .5vw 0;
+    width: 100%;
     padding: .5vw;
     background-color: var(--fundo-padrao);
     box-shadow: var(--sombra-box-padrao);
@@ -417,9 +419,9 @@ fieldset legend, .topico {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: .5vw 0;
-    padding: .5vw;
-    width: 98%;
+    margin-bottom: var(--espaco-padrao);
+    padding: var(--espaco-padrao);
+    width: 100%;
     background-color: var(--fundo-padrao);
     box-shadow: var(--sombra-box-padrao);
     border-radius: .5vw;
@@ -435,7 +437,7 @@ fieldset legend, .topico {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: .5vw;
+    padding: var(--espaco-padrao);
     border: solid .1vw rgba(0, 0, 0, 0);
     background-color: rgba(0, 0, 0, 0);
     font-size: var(--fonte-contato);
