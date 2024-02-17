@@ -1,0 +1,23 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* Estilos para telas entre 992px e 1200px */
+@media screen and (max-width: 1200px) {
+    
+    #secoes {
+        margin: auto 1rem;
+        justify-content: space-between;
+    }
+}
+  
+/* Estilos para telas entre 768px e 991px */
+@media screen and (max-width: 991px) {
+}
+  
+/* Estilos para telas entre 576px e 767px */
+@media screen and (max-width: 767px) {
+}
+  
+/* Estilos para telas menores que 576px */
+@media screen and (max-width: 576px) {
+}

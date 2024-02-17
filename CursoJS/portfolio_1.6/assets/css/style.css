@@ -1,0 +1,421 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Configuração geral das variáveis
+    Estilo padrão para larguras maiores que 1200px
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+:root {
+    --estilo-fonte-padrao: 'Roboto', sans-serif;
+    --estilo-fonte-titulo: 'Montserrat', sans-serif;
+
+    --display-infos: flex;
+    --display-sites: none;
+
+    /*
+    --url-prancheta: url("../img/prancheta.png");
+    */
+    --url-fundo-quadro: url("../img/pinboard.png");
+    --url-borda-imagem: url("../img/wooden-frame.jpg");
+    --url-foto-perfil: url("../img/profile-pic.jpeg");
+    --url-tarefas-desktop: url("../img/task-desktop.png");
+    --url-tarefas-mobile: url("../img/task-mobile.png");
+
+    --fonte-titulo: 2rem;
+    --fonte-geral: 1.3rem;
+    --fonte-detalhes: 1.3rem;
+    --fonte-subtitulo: 1.5rem;
+    --fonte-observacao: 1.1rem;
+    --fonte-contato: 1.4rem;
+
+    --destaque-maximo: 900;
+    --destaque-alto: 800;
+    --destaque-medio: 700;
+    --destaque-normal: 550;
+    
+    --sombra-texto-padrao: .1em .1em .3em rgba(0, 0, 0, 0.3);
+    --sombra-texto-destaque: 1px 1px 1px rgb(39, 39, 39);
+
+    --link-tamanho-menu: 2rem;
+    --link-tamanho-padrao: 1.6rem;
+    --link-cor-padrao: rgb(0, 10, 0);
+    --link-cor-destaque: rgb(30, 0, 0);
+
+    --espaco-padrao: max(.5vw,.5vh);
+    --fundo-padrao: rgba(0, 0, 0, 0.2);
+    --fundo-transparente: rgba(0, 0, 0, 0);
+    --fundo-parede: rgb(0, 10, 0);
+    --borda-padrao: solid .1vw rgba(0, 0, 0, .2);
+    --radial-padrao: radial-gradient(rgba(0,0,0, .1), rgba(0,0,0, .1),rgba(0,0,0, .1) 99%);
+    --transicao-padrao: all 120ms ease-in-out;
+    --transicao-menu: all 200ms ease-in-out;
+    
+    --sombra-box-padrao: .1vw .1vw .5vw rgba(0, 0, 0, 0.7);
+    --sombra-box-expand: .1vw .1vw 1vw rgba(0, 0, 0, 1);
+
+    --sombra-especial: drop-shadow(.1vw .1vw .5vw rgba(0, 0, 0, .7));
+    --sombra-especial-expand: drop-shadow(.1vw .1vw 1vw rgba(0, 0, 0, 1));
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Smooth scroll e setup básico
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, .2);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth !important;
+}
+html{
+    font-size: 16px;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    background-color: var(--fundo-parede);
+    font-family: var(--estilo-fonte-padrao);
+    letter-spacing: .5px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Quadro Principal
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#quadro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: auto;
+    margin: 3dvh auto;
+    padding: 0 9px;
+    height: 94dvh;
+    width: 86vw;
+    background-color: rgba(0, 0, 0, .3);
+    background-image: radial-gradient(transparent, transparent,rgba(0,0,0, .5) 75%), var(--url-fundo-quadro);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center top;
+    border: 1vw solid transparent;
+    border-image-source: var(--url-borda-imagem);
+    border-image-slice: 27 27 27 27;
+    border-image-width: 1vw;
+    border-image-outset: 0;
+    border-image-repeat: round round;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 1);
+    transition: var(--transicao-padrao);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Seções do site
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#menu {
+    width: 100%;
+    border-bottom: .1rem ridge var(--link-cor-padrao);
+}
+#secoes {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.menu-item {
+    transition: var(--transicao-menu);
+}
+.menu-item a {
+    padding: .5rem;
+    position: relative;
+    text-decoration: none;
+    color: var(--link-cor-padrao);
+    font-style: var(--estilo-fonte-titulo);
+    font-size: var(--link-tamanho-menu);
+    font-weight: var(--destaque-normal);
+    text-shadow: var(--sombra-texto-destaque), var(--sombra-texto-padrao);
+    transition: var(--transicao-menu);
+}
+.menu-item a:hover, .menu-item a:focus {
+    color: var(--link-cor-destaque);
+    text-shadow: var(--sombra-texto-destaque), var(--sombra-texto-padrao);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Efeito no link do menu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.menu-item a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0%;
+    width: .2rem;
+    background:rgb(40, 0, 0);
+    transition: var(--transicao-padrao);
+}
+.menu-item a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: .2rem;
+    background:rgb(40, 0, 0);
+    transition: var(--transicao-padrao);
+}
+.menu-item a:hover::after, .menu-item a:focus::after {
+    width: 100%;
+}
+.menu-item a:hover::before, .menu-item a:focus::before {
+    height: 90%;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Descrições gerais
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.wrapper-descricao {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    list-style: inside;
+    padding: var(--espaco-padrao);
+    background-color: var(--fundo-transparente);
+    border: var(--fundo-transparente);
+    border-radius: .1em;
+    font-weight: var(--destaque-normal);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Títulos gerais
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+fieldset legend, .topico {
+    font-family: var(--estilo-fonte-titulo);
+    color: rgba(0, 0, 0, .98);
+    font-weight: var(--destaque-medio);
+    letter-spacing: 1.5px;
+    text-shadow: var(--sombra-texto-destaque), var(--sombra-texto-padrao);
+}
+.detalhes {
+    font-size: var(--fonte-geral);
+    letter-spacing: 2px;
+    text-shadow: var(--sombra-texto-padrao);
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Destaques
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.destaque{
+    font-weight: var(--destaque-alto);
+    letter-spacing: 1.5px;
+    text-shadow: var(--sombra-texto-destaque), var(--sombra-texto-padrao);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Apresentação de conhecimentos
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#infos {
+    display: var(--display-infos);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: var(--espaco-padrao);
+    width: 100%;
+    background-color: var(--fundo-padrao);
+    border: var(--borda-padrao);
+    border-radius: .5em;
+    font-size: var(--fonte-titulo);
+    text-shadow: var(--sombra-texto-padrao);
+    box-shadow: var(--sombra-box-padrao);
+    transition: var(--transicao-padrao);
+}
+#infos:hover {
+    box-shadow: var(--sombra-box-expand);
+}
+#apresentacao-geral {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: var(--espaco-padrao);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Foto de perfil
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#foto-perfil {
+    background-image: var(--radial-padrao),
+                        var(--url-foto-perfil);
+    background-size: cover;
+    position: relative;
+    margin: max(1vw,1vh);
+    height: 150px;
+    width: 112.5px;
+    box-shadow: 0 0 .5vw rgba(0, 0, 0, .8);
+    transition: var(--transicao-padrao);
+}
+#foto-perfil:hover {
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 1);
+    transform: scale(1.1);
+}
+#pino-icon {
+    position: absolute;
+    top: -16px;
+    left: 50px;
+    width: 30px;
+    filter: drop-shadow(0 0 .5vw rgba(0, 0, 0, 1));
+    transition: var(--transicao-padrao);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Apresentação Perfil
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#geral{
+    width: 70%;
+}
+#texto-geral{
+    padding: var(--espaco-padrao);
+    font-size: var(--fonte-geral);
+    line-height: 1.6;
+}
+#apresentacao-dev {
+    display: flex;
+    flex-direction: column;
+}
+.topico {
+    font-size: var(--fonte-titulo);
+}
+.subTopico{
+    display: flex;
+    justify-content: space-evenly;
+    padding: var(--espaco-padrao);
+}
+#back legend, #front legend, #geral legend {
+    font-size: var(--fonte-subtitulo);
+    text-shadow: .1em .1em .3em rgba(44, 44, 44, 0.7);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Apresentação dos sites com demonstração de tecnologia dominada
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#sites {
+    display: var(--display-sites);
+    justify-content: space-evenly;
+    width: 100%;
+    padding: .5vw;
+    background-color: var(--fundo-padrao);
+    box-shadow: var(--sombra-box-padrao);
+    border-radius: .5vw;
+    border: var(--borda-padrao);
+    font-size: var(--fonte-titulo);
+    text-shadow: var(--sombra-texto-padrao);
+    transition: var(--transicao-padrao);
+}
+#sites:hover {
+    box-shadow: var(--sombra-box-expand);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Preview versão Desktop
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.site-desktop {
+    display: flex;
+    margin: auto .5vw;
+
+    background-image: var(--url-tarefas-desktop);
+    background-size: 7.55em 4.3em;
+    background-repeat: no-repeat;
+    background-position: top .26em center;
+}
+
+#desktop {
+    width: 9.5em;
+    filter: var(--sombra-especial);
+    transition: var(--transicao-padrao);
+}
+#desktop:hover {
+    cursor: pointer;
+    filter: var(--sombra-especial-expand);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Preview versão Mobile
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#site-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: var(--url-tarefas-mobile);
+    background-size: 4.1em 8.64em;
+    background-repeat: no-repeat;
+    background-position: top .28em center;
+}
+
+.phone {
+    margin: auto .5vw;
+    height: 9.1em;
+    width: 4.6em;
+    filter: var(--sombra-especial);
+    transition: var(--transicao-padrao);
+}
+.phone:hover {
+    cursor: pointer;
+    filter: var(--sombra-especial-expand);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Descrição do site
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#site-descricao{
+    margin: auto .5vw;
+    padding: .5vw;
+}
+.observacao{
+    font-size: var(--fonte-observacao);
+    color: rgba(0, 0, 0, .9);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Contatos e Download
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#contatos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: var(--espaco-padrao);
+    padding: var(--espaco-padrao);
+    width: 100%;
+    background-color: var(--fundo-padrao);
+    box-shadow: var(--sombra-box-padrao);
+    border-radius: .5vw;
+    border: var(--borda-padrao);
+    font-size: var(--fonte-titulo);
+    text-shadow: var(--sombra-texto-padrao);
+    transition: var(--transicao-padrao);
+}
+#contatos:hover {
+    box-shadow: var(--sombra-box-expand);
+}
+.wrapper-contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--espaco-padrao);
+    border: solid .1vw rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: var(--fonte-contato);
+    text-shadow: var(--sombra-texto-padrao);
+}
+.icon {
+    width: 4em;
+    max-height: 200px;
+    max-width: 150px;
+    filter: drop-shadow(.1vw .1vw .3vw rgba(0, 0, 0, 1));
+}
