@@ -3,21 +3,134 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /* Estilos para telas entre 992px e 1200px */
 @media screen and (max-width: 1200px) {
-    
+
     #secoes {
         margin: auto 1rem;
         justify-content: space-between;
     }
 }
-  
+
 /* Estilos para telas entre 768px e 991px */
 @media screen and (max-width: 991px) {
+
+    .menu-item a {
+        font-size: 1.4rem;
+    }
+
+    .detalhes {
+        font-size: 1.1rem;
+    }
+
+    #infos {
+        font-size: 1.5rem;
+    }
+
+    #texto-geral {
+        font-size: 1.1rem;
+    }
+
+    .topico {
+        font-size: 1.4rem;
+    }
+
+    #contatos {
+        font-size: 1.5rem;
+    }
+
+    .wrapper-contato {
+        font-size: 1.1rem;
+    }
 }
-  
-/* Estilos para telas entre 576px e 767px */
+
+/* Estilos para telas entre 586px e 767px */
 @media screen and (max-width: 767px) {
+    #apresentacao-geral {
+        flex-direction: column;
+    }
 }
-  
-/* Estilos para telas menores que 576px */
-@media screen and (max-width: 576px) {
+
+/* Estilos para telas menores que 586px */
+@media screen and (max-width: 586px) {
+    .menu-item a {
+        font-size: 1rem;
+    }
+
+    .detalhes {
+        font-size: 1rem;
+    }
+
+    #infos {
+        font-size: 1.3rem;
+    }
+
+    #texto-geral {
+        font-size: 1rem;
+    }
+
+    .topico {
+        font-size: 1.3rem;
+    }
+
+    #back legend,
+    #front legend,
+    #geral legend {
+        font-size: 1.2rem;
+    }
+
+    #contatos {
+        font-size: 1.3rem;
+    }
+
+    .wrapper-contato {
+        font-size: 1rem;
+    }
+}
+
+/* Estilos para telas menores que 480px */
+@media screen and (max-width: 480px) {
+    #secoes {
+        flex-direction: column;
+    }
+
+    .menu-item {
+        padding: 1vw;
+    }
+
+    .menu-item a {
+        font-size: .9rem;
+    }
+
+    .menu-item a::before {
+        width: .5vw;
+    }
+
+    .menu-item a::after {
+        height: .5vw;
+    }
+
+    #infos {
+        font-size: 1.2rem;
+    }
+
+    .topico {
+        font-size: 1rem;
+    }
+
+    #back legend,
+    #front legend,
+    #geral legend {
+        font-size: 1.1rem;
+    }
+
+    .detalhes {
+        font-size: .9rem;
+    }
+
+    #contatos {
+        font-size: 1.2rem;
+    }
+
+    .wrapper-contato {
+        font-size: .8rem;
+    }
 }

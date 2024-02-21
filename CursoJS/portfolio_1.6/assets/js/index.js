@@ -21,7 +21,7 @@ function escopo() {
             } else if (linkId === "nav-redirectPage") {
                 console.clear();
                 console.log("Redirect Page");
-                
+
             }
         }
 
