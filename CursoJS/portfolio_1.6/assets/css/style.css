@@ -198,6 +198,43 @@ body {
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Efeito mudança de seção
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    100% {
+        opacity: 0;
+    }
+
+    0% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.modal[open] {
+    animation: fade-in 300ms forwards;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Descrições gerais
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .wrapper-descricao {
@@ -343,9 +380,9 @@ fieldset legend,
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #sites {
     display: var(--display-sites);
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100%;
-    padding: .5vw;
+    padding: .5vw 5%;
     background-color: var(--fundo-padrao);
     box-shadow: var(--sombra-box-padrao);
     border-radius: .5vw;
@@ -357,6 +394,12 @@ fieldset legend,
 
 #sites:hover {
     box-shadow: var(--sombra-box-expand);
+}
+
+#sites-preview {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~

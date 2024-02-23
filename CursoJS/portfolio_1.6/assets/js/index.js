@@ -3,7 +3,7 @@ function escopo() {
         const navInicio = document.getElementById("nav-inicio");
         const navGestaoTarefas = document.getElementById("nav-gestaoTarefas");
         const navRedirectPage = document.getElementById("nav-redirectPage");
-        const navContato = document.getElementById("nav-contato");
+        const modal = document.querySelector("#modal");
 
         function trocaSite(event) {
             event.preventDefault();
