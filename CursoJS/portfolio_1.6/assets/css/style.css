@@ -7,12 +7,12 @@
     --estilo-fonte-titulo: 'Montserrat', sans-serif;
 
     --display-infos: flex;
-    --display-sites: none;
+    --display-sites: flex;
 
-    --url-borda-imagem: url("../img/wooden-frame.jpg");
-    --url-foto-perfil: url("../img/profile-pic.jpeg");
-    --url-tarefas-desktop: url("../img/task-desktop.png");
-    --url-tarefas-mobile: url("../img/task-mobile.png");
+    --url-borda-imagem: url("../img/wooden-frame.webp");
+    --url-foto-perfil: url("../img/profile-pic.webp");
+    --url-tarefas-desktop: url("../img/task-desktop.webp");
+    --url-tarefas-mobile: url("../img/task-mobile.webp");
 
     --fonte-titulo: 1.8rem;
     --fonte-subtitulo: 1.5rem;
@@ -25,8 +25,8 @@
     --destaque-medio: 650;
     --destaque-normal: 550;
 
-    --texto-cor-padrao: rgb(181, 236, 218);
-    --texto-cor-destaque: rgb(200, 200, 200);
+    --texto-cor-padrao: rgb(180, 180, 180);
+    --texto-cor-destaque: rgb(181, 236, 218);
     --texto-sombra-padrao: 1px 1px .1rem rgb(0, 0, 0);
 
     --link-tamanho-padrao: 1.6rem;
@@ -42,9 +42,10 @@
     --borda-padrao: solid .1vw rgba(0, 0, 0, .2);
 
     --espaco-padrao: max(.5vw, .5vh);
+    --espaco-sessoes: max(2vw, 2vh);
     --radial-padrao: radial-gradient(rgba(0, 0, 0, .1),
-                                    rgba(0, 0, 0, .1),
-                                    rgba(0, 0, 0, .3) 100%);
+            rgba(0, 0, 0, .1),
+            rgba(0, 0, 0, .3) 100%);
     --transicao-padrao: all 120ms ease-in-out;
     --transicao-menu: all 200ms ease-in-out;
 
@@ -275,7 +276,7 @@ fieldset legend,
     display: var(--display-infos);
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: var(--espaco-padrao);
     width: 100%;
     background-color: var(--fundo-sessao);
@@ -293,7 +294,7 @@ fieldset legend,
 
 #apresentacao-geral {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     margin: var(--espaco-padrao);
@@ -355,12 +356,11 @@ fieldset legend,
 
 .subTopico {
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: var(--espaco-padrao);
 }
 
-#back legend,
-#front legend,
 #geral legend {
     font-size: var(--fonte-subtitulo);
     text-shadow: .1em .1em .3em rgba(44, 44, 44, 0.7);
@@ -371,9 +371,10 @@ fieldset legend,
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #sites {
     display: var(--display-sites);
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     width: 100%;
-    padding: .5vw 5%;
+    padding: var(--espaco-sessoes);
     background-color: var(--fundo-sessao);
     box-shadow: var(--sombra-box-padrao);
     border-radius: .5vw;
@@ -389,8 +390,9 @@ fieldset legend,
 
 #sites-preview {
     display: flex;
-    width: 40%;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -403,7 +405,7 @@ fieldset legend,
     background-image: var(--url-tarefas-desktop);
     background-size: 7.55em 4.3em;
     background-repeat: no-repeat;
-    background-position: top .26em center;
+    background-position: top .26em left .98em;
 }
 
 #desktop {
@@ -491,9 +493,17 @@ fieldset legend,
     text-shadow: var(--texto-sombra-padrao);
 }
 
-.icon {
-    width: 4em;
+.wrapper-contato legend {
+    color: var(--texto-cor-padrao);
+}
+
+.wrapper-contato a {
     max-height: 200px;
-    max-width: 150px;
-    filter: drop-shadow(.1vw .1vw .3vw rgba(0, 0, 0, 1));
+    max-width: 200px;
+    filter: var(--sombra-especial);
+    transition: var(--transicao-padrao);
+}
+
+.wrapper-contato a:hover {
+    filter: var(--sombra-especial-expand);
 }
