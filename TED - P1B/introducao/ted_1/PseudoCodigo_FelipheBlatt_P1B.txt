@@ -1,0 +1,14 @@
+Entrar no site da Amazon
+Pesquisar o livro "fluent python: clear, concise, and effective programming"
+Clicar no livro caso esteja disponível
+Escolher entre versão física ou digital
+Escolher a quantidade desejada
+Caso sua conta seja Prime, marque a opção de frete grátis
+Clicar em "Comprar Agora"
+Escolher endereço para entrega
+Escolher método de pagamento
+Preencher vale-presente ou código promocional, caso tenha
+Escolher forma de entrega
+Revisar o pedido
+Finalizar o pedido
+Realizar o pagamento

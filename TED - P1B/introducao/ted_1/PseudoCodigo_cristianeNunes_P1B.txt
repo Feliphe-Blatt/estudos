@@ -1,0 +1,16 @@
+entrar no google
+digitar amazon na aba de pesquisa
+entrar no site da amazon
+digitar na área de pesquisa o nome do livro
+clicar no livro à comprar na versão mais nova
+escolher a versão física ou digital
+escolher a quantidade
+marcar frete grátis, caso sua conta tenha amazon prime
+caso não tenha, clicar em comprar agora
+digitar o endereço de entrega
+escolher o método de pagamento
+inserir vale presente ou código promocional, se tiver
+revisar o item à comprar
+escolher a forma de entrega
+finalizar o pedido
+realizar o pagamento
