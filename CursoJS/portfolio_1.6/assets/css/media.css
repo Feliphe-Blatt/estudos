@@ -5,7 +5,7 @@
 @media screen and (max-width: 1200px) {
 
     #secoes {
-        margin: auto 1rem;
+        margin: auto 1.4rem;
         justify-content: space-between;
     }
 }
@@ -14,31 +14,23 @@
 @media screen and (max-width: 991px) {
 
     .menu-item a {
-        font-size: 1.4rem;
-    }
-
-    .detalhes {
-        font-size: 1.1rem;
-    }
-
-    #infos {
-        font-size: 1.5rem;
+        font-size: 2.4rem;
     }
 
     #texto-geral {
-        font-size: 1.1rem;
+        font-size: 1.6rem;
+    }
+
+    .destaque {
+        font-size: 1.8rem;
     }
 
     .topico {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
     }
 
-    #contatos {
-        font-size: 1.5rem;
-    }
-
-    .wrapper-contato {
-        font-size: 1.1rem;
+    .detalhes li {
+        font-size: 1.7rem;
     }
 }
 
@@ -52,11 +44,7 @@
 /* Estilos para telas menores que 600px */
 @media screen and (max-width: 600px) {
     .menu-item a {
-        font-size: 1rem;
-    }
-
-    .detalhes {
-        font-size: 1rem;
+        font-size: 1.8rem;
     }
 
     #infos {
@@ -64,25 +52,19 @@
     }
 
     #texto-geral {
-        font-size: 1rem;
+        font-size: 1.6rem;
+    }
+
+    .destaque {
+        font-size: 1.7rem;
     }
 
     .topico {
-        font-size: 1.3rem;
+        font-size: 1.7rem;
     }
 
-    #back legend,
-    #front legend,
-    #geral legend {
-        font-size: 1.2rem;
-    }
-
-    #contatos {
-        font-size: 1.3rem;
-    }
-
-    .wrapper-contato {
-        font-size: 1rem;
+    .detalhes li {
+        font-size: 1.5rem;
     }
 }
 
@@ -93,45 +75,30 @@
     }
 
     .menu-item {
-        padding: 1vw;
+        margin: max(1.2vh, 1.2vw);
     }
 
     .menu-item a {
-        font-size: .9rem;
+        font-size: 1.8rem;
     }
 
     .menu-item a::before {
-        width: .5vw;
+        width: min(.5vh, .5vw);
     }
 
     .menu-item a::after {
-        height: .5vw;
+        height: min(.5vh, .5vw);
     }
 
-    #infos {
-        font-size: 1.2rem;
+    #geral {
+        width: 90%;
     }
 
     .topico {
-        font-size: 1rem;
+        font-size: 1.6rem;
     }
 
-    #back legend,
-    #front legend,
-    #geral legend {
-        font-size: 1.1rem;
-    }
-
-    .detalhes {
-        font-size: .9rem;
-    }
-
-    #contatos {
-        font-size: 1.2rem;
-        flex-wrap: wrap;
-    }
-
-    .wrapper-contato {
-        font-size: .8rem;
+    .detalhes li {
+        font-size: 1.3rem;
     }
 }

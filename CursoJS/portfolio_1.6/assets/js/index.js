@@ -1,4 +1,5 @@
 function escopo() {
+
     document.addEventListener("DOMContentLoaded", function () {
         const navInicio = document.getElementById("nav-inicio");
         const navGestaoTarefas = document.getElementById("nav-gestaoTarefas");
@@ -30,4 +31,5 @@ function escopo() {
         navRedirectPage.addEventListener("click", trocaSite);
     });
 }
+
 escopo();
