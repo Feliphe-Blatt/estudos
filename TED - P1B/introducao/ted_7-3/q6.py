@@ -22,4 +22,3 @@ if (achou):
     print(f'\nVetor modificado:', novo_vetor, "\n")
 else:
     print(f'\nVetor original:', vetor, "\n")
-
