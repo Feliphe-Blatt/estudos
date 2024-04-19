@@ -12,10 +12,10 @@ def conventional_commit(tipo, desc):
     subprocess.run(["git", "commit", "-m", message])
 
     # Salva histórico em log.txt
-    subprocess.run(["git", "status", "--oneline", ">>", "log.txt"])
+    subprocess.run(["git", "log", "--oneline", ">>", "log.txt"])
 
 tipo = "Ci"
 
-descricao = "Automação de commit convencional 1.0"
+descricao = "Update da automação de commit convencional 1.0"
 
 conventional_commit(tipo, descricao)
