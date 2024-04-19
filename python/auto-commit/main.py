@@ -2,7 +2,7 @@ import subprocess
 
 tipo = "Doc"
 
-descricao = "Documentação do commit convencional 1.0"
+descricao = "Update da documentação do commit convencional 1.0"
 
 def conventional_commit(tipo, desc):
 

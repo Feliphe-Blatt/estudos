@@ -1,4 +1,4 @@
-# COnventional commits
+# Conventional commits
 
 ## Como utilizar
   - Edite as variáveis "tipo" e "descricao":
@@ -6,6 +6,7 @@
 
   - Edite os arquivos a adicionar ao stage e que vão entrar no commit:
     > Em subprocess.run(["git", "add", "."]) deve-se trocar o argumento "." por "nome completo do arquivo"
+    > Caso queira mais arquivos, basta adicionar uma vírgula seguido de "nome completo do outro arquivo"
 
   - Em seguida poderá rodar o script
     >  Irá gerar um arquivo "log.txt" com o histórico de commits do repositório, porém ele será gerado APÓS o commit

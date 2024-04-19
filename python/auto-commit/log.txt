@@ -1,0 +1,108 @@
+6fbe045 Doc: Documentação do commit convencional 1.0
+926c2ef Ci: Update da automação de commit convencional 1.0
+6964e23 Ci: Update da automação de commit convencional 1.0
+81bb07d Ci: Update da automação de commit convencional 1.0
+a3bdf7a Ci: Automação de commit convencional 1.0
+a31e954 teste de commit
+6c20f05 Create README.md
+40ed9a2 Create .gitignore
+6e5bb59 exercícios de python
+47829f9 exercicios de python
+beebde9 Exercícios de Python
+1fac815 Delete Lei-n-142-de-08-de-Maio-de-2013-Aposentadoria-Especial-para-PCD.pdf
+495a61a exercício de python
+b7f2386 Exercício de python
+bd80791 Atualização do portfólio
+4704ff6 .
+d3ff05e Atualização do Portfólio
+aa553db Atualização Portfólio
+20756c6 Atualização de performance e estilo
+b1244f9 Exercícios de Python com CustomTKinter
+fdc21a8 Estudos de python
+e4768fd Estudo de python e criação de ambiente virtual
+f0b7349 Preparando para próxima fase da atualização
+ae59d0e Media Queries e ajustes de estilo
+5e61cb1 .
+c375aa4 .
+2e5467d Atualização portfólio
+0e8dcbb .
+0009d21 .
+10e9454 .
+109b409 Processo de adição da responsividade
+b1067b9 Correção de bug
+413b35b parte da atualização do portfólio 1.5
+f03cb37 .
+ad7a937 .
+df95a4e .
+99262cd .
+09b69a6 .
+3b8e106 Ajuste de estilos e unidades de medida
+863a5e8 .
+3311f3e .
+2aa41a0 .
+44d2331 .
+ac04178 .
+7ea9f05 .
+dcf2314 .
+9b468cb organizando para futuras atualizações
+2aa64f9 Organizando arquivos de estilo e fontes de mídia
+ebc9016 .
+2ccbbac .
+62fba0e .
+09ea3e1 Cópia do portfólio
+875d24e .
+4e4b99b .
+d814b52 C.R.U.D. de tarefas (atualização)
+63f3f02 C.R.U.D. de tarefas (atualização)
+2cda7a0 .
+e57a44e .
+72c22d1 .
+846cbd8 Exercício Js C.R.U.D. de Tarefas.
+862e559 .
+ae58544 dia13
+ac20ed7 .
+2bdb657 .
+2f4cf1a .
+9c5714d .
+d69142c .
+edeec12 Dia 11
+e318da6 Dia 10
+45e99d6 .
+4e23582 Dia 9
+645a809 .
+9068f41 Dia 9
+ffd680c .
+3318d24 .
+67badd6 Dia 8
+1133327 Dia 8
+23c6e06 Dia8
+1db4cb4 .
+211878c .
+edaff0a .
+8e81373 dia 7
+60e78e5 .
+a52db1a Dia 6
+9bdec7f .
+92b7aaf .
+03e9bea dia 4
+2432481 .
+0f4443a .
+775e290 .
+67c2503 .
+5c1e99d mudança de nomenclatura
+daac18d Recriando e recomeçando JS
+978cef1 Delete js directory
+a864fdb Estudando básico de funções
+016760c estudo de arrays e começo de funções
+006d9e5 .
+ce6cd31 .
+fa6932a .
+3e0b861 .
+32202ab Create index.js
+0125e35 .
+eaa43ee Update ESP-32-LedControlHtmlCss.ino
+0e2a9e3 .
+70110c0 .
+022e50d .
+2e422c6 .
+07a5682 Estudos
