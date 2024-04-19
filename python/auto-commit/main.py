@@ -12,7 +12,7 @@ def conventional_commit(tipo, desc):
     subprocess.run(["git", "commit", "-m", message])
 
     # Salva histórico em log.txt
-    subprocess.run(["git", "log", "--oneline", ">>", "log.txt"])
+    subprocess.run(["git", "log", "--oneline", ">>", "./log.txt"])
 
 tipo = "Ci"
 
