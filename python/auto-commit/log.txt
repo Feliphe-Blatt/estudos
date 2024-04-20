@@ -1,3 +1,4 @@
+d81f085 Doc: Update da documentação do commit convencional 1.0
 6fbe045 Doc: Documentação do commit convencional 1.0
 926c2ef Ci: Update da automação de commit convencional 1.0
 6964e23 Ci: Update da automação de commit convencional 1.0
