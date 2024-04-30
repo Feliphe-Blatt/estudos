@@ -21,7 +21,7 @@ temporario = ''
 
 def somar():
 
-    
+    #configure
 
 botao = customtkinter.CTkButton(app, text='Calcular', command=somar)
 
