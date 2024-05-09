@@ -1,0 +1,16 @@
+
+prioridade de estilos:
+
+1- !important
+
+2- Dentro do elemento
+
+3- Incorporado no "head"
+
+4- Arquivo .css externo
+
+5- Estilo do usuário (se houver)
+
+6- Estilo padrão do navegador
+
+7- cascading style sheets
