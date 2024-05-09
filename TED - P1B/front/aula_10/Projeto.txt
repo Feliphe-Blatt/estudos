@@ -7,7 +7,7 @@
 até 6 pessoas
 apresentação de 5min a 10min
 
-será apresentação
+terá apresentação
 só precisa html + css, js opcional
 vai ser cobrada criatividade
 tem que ter algo útil
