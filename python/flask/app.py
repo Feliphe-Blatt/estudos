@@ -10,4 +10,4 @@ def ola_mundo():
 
     return render_template('index.html')
 
-app.run()
+app.run(debug=True, port=8080)
