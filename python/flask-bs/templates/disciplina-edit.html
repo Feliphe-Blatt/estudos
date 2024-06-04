@@ -1,0 +1,40 @@
+{% extends "modelo.html" %}
+
+{% block conteudo %}
+
+<h1>Editar Disciplina</h1>
+
+<hr>
+
+<!-- Formulário de edição de disciplina -->
+<form class="d-flex flex-column justify-content-evenly" action="{{ url_for('editar_disciplina') }}" method="post">
+  
+  <!-- Index da disciplina -->
+  <input type="hidden" name="disc_id" value="{{ disc_id }}">
+
+  <fieldset>
+    <legend>Nome:</legend>
+    <input type="name" class="form-control" id="nome" name="nome" placeholder="Disciplina nova..."
+      value="{{ disciplina.nome }}" required>
+  </fieldset>
+
+  <fieldset>
+    <legend>Descrição:</legend>
+    <input type="textarea" class="form-control" id="descricao" name="descricao" placeholder="Breve Descrição..."
+      value="{{ disciplina.descricao }}" required>
+  </fieldset>
+
+  <fieldset>
+    <legend>Carga horária:</legend>
+    <input type="number" class="form-control" id="carga" name="carga" placeholder="Horas..."
+      value="{{ disciplina.carga }}" required>
+  </fieldset>
+  
+  <!-- Editar -->
+  <button type="submit" class="btn btn-success align-self-center">Editar</button>
+</form>
+
+<!-- Cancelar -->
+<a href="/disciplinas"><button class="btn btn-danger">Cancelar</button></a>
+
+{% endblock %}

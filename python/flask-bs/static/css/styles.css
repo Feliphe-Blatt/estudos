@@ -1,13 +1,31 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Variáveis CSS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 :root {
     --primary-color: rgb(17, 86, 102);
-    --primary-color-darker: rgb(9, 48, 56);
-    --sombra-box-padrao: .1vw .1vw .5vw rgba(0, 0, 0, 0.7);
+    --primary-color-darker: rgb(13, 64, 75);
+
+    --borda-padrao: 1px solid rgba(0 , 0, 0, .2);
+    --transicao-padrao: all 200ms ease-in-out;
+
+    --sombra-box-padrao: .1vw .1vw .4vw rgba(0, 0, 0, 0.5);
+    --sombra-box-expand: .1vw .1vw .6vw rgba(0, 0, 0, 0.7);
+
+    --texto-sombra-padrao: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Configuração geral
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+* {
+    scroll-behavior: smooth !important;
 }
 
 body {
     height: 100vh;
     text-align: center;
     font-family: 'roboto', sans-serif;
+    text-shadow: var(--texto-sombra-padrao);
     background-color: var(--primary-color);
 }
 
@@ -17,10 +35,52 @@ body {
 }
 
 main {
-    max-width: 640px;
+    overflow: auto;
+    max-width: fit-content;
     margin: 2vh auto;
     padding: 20px;
     background-color: white;
     border-radius: 10px;
     box-shadow: var(--sombra-box-padrao);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Formulários
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+fieldset {
+    padding: 2px;
+}
+legend {
+    text-align: start;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Tabela
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.sep {
+    border-left: var(--borda-padrao);
+    border-right: var(--borda-padrao);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Botões
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.btn {
+    width: fit-content;
+    margin: 5px;
+    box-shadow: var(--sombra-box-padrao);
+    transition: var(--transicao-padrao);
+}
+.btn:hover {
+    box-shadow: var(--sombra-box-expand);
+}
+
+.btn-padrao {
+    border: none;
+    color: rgba(255 , 255, 255, 1);
+    background-color: var(--primary-color);
+}
+.btn-padrao:hover {
+    color: rgba(255 , 255, 255, 1);
+    background-color: var(--primary-color-darker);
 }

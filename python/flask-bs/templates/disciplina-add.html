@@ -1,0 +1,35 @@
+{% extends "modelo.html" %}
+
+{% block conteudo %}
+
+<h1>Adicionar Disciplina</h1>
+
+<hr>
+
+<!-- Formulário de adição de disciplina -->
+<form class="d-flex flex-column justify-content-evenly" action="{{ url_for('criar_disciplina') }}" method="post">
+
+  <fieldset>
+    <legend>Nome:</legend>
+    <input type="name" class="form-control" id="nome" name="nome" placeholder="Disciplina nova..." required>
+  </fieldset>
+
+  <fieldset>
+    <legend>Descrição:</legend>
+    <input type="textarea" class="form-control" id="descricao" name="descricao" placeholder="Breve Descrição..."
+      required>
+  </fieldset>
+
+  <fieldset>
+    <legend>Carga horária:</legend>
+    <input type="number" class="form-control" id="carga" name="carga" placeholder="Horas..." required>
+  </fieldset>
+
+  <!-- Adicionar -->
+  <button type="submit" class="btn btn-success align-self-center">Adicionar</button>
+</form>
+
+<!-- Cancelar -->
+<a href="/disciplinas"><button class="btn btn-danger">Cancelar</button></a>
+
+{% endblock %}
