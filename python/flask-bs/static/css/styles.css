@@ -1,0 +1,26 @@
+:root {
+    --primary-color: rgb(17, 86, 102);
+    --primary-color-darker: rgb(9, 48, 56);
+    --sombra-box-padrao: .1vw .1vw .5vw rgba(0, 0, 0, 0.7);
+}
+
+body {
+    height: 100vh;
+    text-align: center;
+    font-family: 'roboto', sans-serif;
+    background-color: var(--primary-color);
+}
+
+.navbar {
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: var(--sombra-box-padrao);
+}
+
+main {
+    max-width: 640px;
+    margin: 2vh auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--sombra-box-padrao);
+}

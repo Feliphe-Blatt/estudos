@@ -1,0 +1,23 @@
+{% extends "modelo.html" %}
+
+{% block conteudo %}
+
+<h1>Criar Disciplina</h1>
+
+<form action="{{ url_for('criar') }}" method="post">
+    <div>
+      <label for="nome" class="form-label">Nome:</label>
+      <input type="name" class="form-control" id="nome" name="nome">
+    </div>
+    <div>
+      <label for="descricao" class="form-label">Descrição:</label>
+      <input type="textarea" class="form-control" id="descricao" name="descricao">
+    </div>
+    <div>
+      <label for="carga" class="form-label">Carga horária:</label>
+      <input type="number" class="form-control" id="carga" name="carga" value="0">
+    </div>
+    <button type="submit" class="btn btn-primary">Adicionar</button>
+  </form>
+
+{% endblock %}

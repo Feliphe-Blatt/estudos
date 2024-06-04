@@ -1,0 +1,16 @@
+{
+    "eventos": [
+
+        {
+            "data": "12/11/24",
+            "descricao": "Aula de mapa 'K'",
+            "tipo": "aula"
+        },
+
+        {
+            "data": "11/12/24",
+            "descricao": "Feriado, não haverá aula",
+            "tipo": "evento"
+        }
+    ]
+}

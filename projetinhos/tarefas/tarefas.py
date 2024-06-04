@@ -3,11 +3,13 @@ tarefas = {
 }
 
 undo_list = {}
+
 #//////////////////////////////////////////////////////////////////////////////////
 def tarefa_add(lista):
     nome = input('\nNome da nova tarefa: ')
     desc = input('\n\tDescrição:\n\t> ')
     lista[nome] = desc
+
 #//////////////////////////////////////////////////////////////////////////////////
 def tarefa_undo(lista, un):
     if not lista:
@@ -17,6 +19,7 @@ def tarefa_undo(lista, un):
         t, d = lista.popitem()
         un[t] = d
         print('\n  Tarefa Desfeita!')
+
 #//////////////////////////////////////////////////////////////////////////////////
 def tarefa_redo(lista, un):
     if not un:
@@ -26,6 +29,7 @@ def tarefa_redo(lista, un):
         t, d = un.popitem()
         lista[t] = d
         print('\n  Tarefa Refeita!')
+        
 #//////////////////////////////////////////////////////////////////////////////////
 def tarefa_listar(lista):
     for t, d in lista.items():

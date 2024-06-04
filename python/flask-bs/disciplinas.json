@@ -1,0 +1,19 @@
+{
+    "disciplinas": [
+        {
+            "nome": "IHC",
+            "descricao": "Design front-end, acessibilidade, interação humano-máquina",
+            "carga": 1
+        },
+        {
+            "nome": "Redes",
+            "descricao": "Redes de computadores",
+            "carga": 2
+        },
+        {
+            "nome": "Lógica",
+            "descricao": "Lógica básica",
+            "carga": "60"
+        }
+    ]
+}
