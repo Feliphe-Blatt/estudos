@@ -1,0 +1,38 @@
+{% extends "modelo.html" %}
+
+{% block conteudo %}
+
+<h1>Adicionar Aula / Evento</h1>
+
+<hr>
+
+<!-- Formulário de adição de disciplina -->
+<form class="d-flex flex-column justify-content-evenly" action="{{ url_for('event_add') }}" method="post">
+
+    <fieldset>
+        <legend>Tipo:</legend>
+        <select class="form-select" name="tipo">
+            <option value="evento">Evento</option>
+            <option value="aula">Aula</option>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <legend>Descrição:</legend>
+        <input type="textarea" class="form-control" id="descricao" name="descricao" placeholder="Breve Descrição..."
+            required>
+    </fieldset>
+
+    <fieldset>
+        <legend>Data:</legend>
+        <input type="date" class="form-control" id="data" name="data" required>
+    </fieldset>
+
+    <!-- Adicionar -->
+    <button type="submit" class="btn btn-success align-self-center">Adicionar</button>
+</form>
+
+<!-- Cancelar -->
+<a href="/eventos"><button class="btn btn-danger">Cancelar</button></a>
+
+{% endblock %}

@@ -1,16 +1,14 @@
 {
     "eventos": [
-
         {
-            "data": "12/11/24",
-            "descricao": "Aula de mapa 'K'",
-            "tipo": "aula"
-        },
-
-        {
-            "data": "11/12/24",
+            "data": "11/12/2024",
             "descricao": "Feriado, não haverá aula",
             "tipo": "evento"
+        },
+        {
+            "data": "21/02/3333",
+            "descricao": "Lógica básica",
+            "tipo": "aula"
         }
     ]
 }

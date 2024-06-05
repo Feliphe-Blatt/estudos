@@ -1,0 +1,40 @@
+{% extends "modelo.html" %}
+
+{% block conteudo %}
+
+<h1>Editar Aula / Evento</h1>
+
+<hr>
+
+<!-- Formulário de adição de disciplina -->
+<form class="d-flex flex-column justify-content-evenly" action="{{ url_for('event_edit') }}" method="post">
+
+    <input type="hidden" name="event_id" value="{{ event_id }}">
+
+    <fieldset>
+        <legend>Tipo:</legend>
+        <select class="form-select" name="tipo">
+            <option value="evento" {% if evento.tipo=='evento' %}selected{% endif %}>Evento</option>
+            <option value="aula" {% if evento.tipo=='aula' %}selected{% endif %}>Aula</option>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <legend>Descrição:</legend>
+        <input type="textarea" class="form-control" id="descricao" name="descricao" placeholder="Breve Descrição..."
+            value="{{ evento.descricao }}" required>
+    </fieldset>
+
+    <fieldset>
+        <legend>Data:</legend>
+        <input type="date" class="form-control" id="data" name="data" value="{{ evento.data_normal }}" required>
+    </fieldset>
+
+    <!-- Editar -->
+    <button type="submit" class="btn btn-success align-self-center">Editar</button>
+</form>
+
+<!-- Cancelar -->
+<a href="/eventos"><button class="btn btn-danger">Cancelar</button></a>
+
+{% endblock %}

@@ -2,6 +2,63 @@
 
 {% block conteudo %}
 
-<h1>Aula / Evento</h1>
+<h1>Aulas / Eventos</h1>
+
+<!-- Botão de Adição -->
+<a href="/eventos/add">
+    <button class="btn btn-success">Adicionar Aula / Evento</button>
+</a>
+
+<hr>
+
+<!-- Tabela de Eventos -->
+<section>
+    <table class="table align-middle table-hover table-responsive table-sm">
+
+        <!-- Legenda da Tabela -->
+        <thead class="thead-default">
+            <tr>
+                <th>Tipo</th>
+                <th>Descrição</th>
+                <th>Data</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+
+        <tbody class="table-group-divider">
+            {% for item in eventos %}
+
+            <tr class="table-group-divider">
+
+                <!-- Tipo -->
+                <td class="sep"><b>{{ item["tipo"] }}</b></td>
+
+                <!-- Descrição -->
+                <td class="sep text-start p-2">{{ item["descricao"] }}.</td>
+
+                <!-- Data -->
+                <td class="sep">{{ item["data"] }}</td>
+
+                <!-- Ações -->
+                <td class="sep">
+
+                    <!-- Editar -->
+                    <a href="/eventos/edit/{{ loop.index - 1 }}">
+                        <button class="btn btn-padrao">Editar</button>
+                    </a>
+
+                    <!-- Apagar -->
+                    <form action="{{ url_for('event_del') }}" method="post">
+                        <input type="hidden" id="event_id" name="event_id" value="{{ loop.index - 1 }}">
+                        <button type="submit" class="btn btn-danger"
+                            onclick="return confirm('Tem certeza que quer deletar o evento?');">Apagar</button>
+                    </form>
+                </td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
 
 {% endblock %}
