@@ -8,52 +8,64 @@
     --estilo-fonte-padrao: 'Roboto', sans-serif;
     --estilo-fonte-titulo: 'Montserrat', sans-serif;
 
+    
+    /* Controle Sessões */
     --display-infos: flex;
     --display-sites: flex;
 
+    /* URL Imagens */
     --url-borda-imagem: url("../img/wooden-frame.webp");
     --url-foto-perfil: url("../img/profile-pic.webp");
     --url-tarefas-desktop: url("../img/task-desktop.webp");
     --url-tarefas-mobile: url("../img/task-mobile.webp");
 
+    /* Tamanho de Fonte */
     --fonte-titulo: 2.6rem;
     --fonte-subtitulo: 2rem;
     --fonte-destaque: 1.9rem;
     --fonte-geral: 1.8rem;
     --fonte-observacao: 1.5rem;
 
+    /* Peso de Fonte */
     --destaque-maximo: 900;
     --destaque-alto: 800;
     --destaque-medio: 650;
     --destaque-normal: 550;
 
+    /* Cor de Texto */
     --texto-cor-padrao: rgb(39, 39, 39);
     --texto-cor-destaque: rgb(8, 51, 54);
-    --texto-sombra-padrao: 1px 1px .2rem rgb(100, 100, 100);
-    --texto-sombra-titulo: 1px 1px .2rem rgb(100, 100, 100), 1px 1px .4rem rgb(191, 255, 234);
 
-    --link-efeito: rgb(39, 39, 39);
-
+    /* Sombra de Texto */
+    --texto-sombra-padrao: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    
+    /* Cores Gerais */
     --fundo-parede: rgb(8, 51, 54);
     --fundo-quadro-padrao: rgb(191, 255, 234);
-    --fundo-transparente: rgba(0, 0, 0, 0);
     --fundo-sessao: rgba(0, 0, 0, 0.2);
-
-    --borda-padrao: solid .1vw rgba(0, 0, 0, .2);
-
-    --espaco-padrao: max(.5vw, .5vh);
-    --espaco-sessoes: max(2vw, 2vh);
+    --fundo-transparente: rgba(0, 0, 0, 0);
 
     --radial-padrao: radial-gradient(rgba(0, 0, 0, 0),
             rgba(0, 0, 0, .1),
             rgba(0, 0, 0, .3) 100%);
 
-    --transicao-padrao: all 200ms ease-in-out;
-    --transicao-menu: all 200ms ease-in-out;
+    /* Borda */
+    --borda-padrao: solid .1vw rgba(0, 0, 0, .2);
+    --borda-menu: 0 0 .8rem .8rem;
 
+    /* Espaçamento */
+    --espaco-padrao: max(1vw, 1vh);
+    --espaco-sessoes: max(.5vw, .5vh);
+    
+    /* Transições */
+    --transicao-padrao: all 200ms ease-in-out;
+    --transicao-menu: all 300ms ease-in-out;
+    
+    /* Sombras box */
     --sombra-box-padrao: .1vw .1vw .5vw rgba(0, 0, 0, 0.7);
     --sombra-box-expand: .1vw .1vw 1vw rgba(0, 0, 0, 1);
 
+    /* Sombras Especiais */
     --sombra-especial: drop-shadow(.1vw .1vw .5vw rgba(0, 0, 0, 0.4));
     --sombra-especial-expand: drop-shadow(.1vw .1vw 1vw rgba(191, 255, 234, .6));
 }
@@ -64,15 +76,12 @@
 ::-webkit-scrollbar {
     width: 8px;
 }
-
 ::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, .3);
 }
-
 ::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 0, 0.5);
 }
-
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.9);
 }
@@ -80,174 +89,43 @@
 *,
 *::before,
 *::after {
-    color: var(--texto-cor-padrao);
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
     font-size: var(--fonte-geral);
-    scroll-behavior: smooth !important;
+    text-shadow: var(--texto-sombra-padrao);
+    color: var(--texto-cor-padrao);
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-x: auto;
     background-color: var(--fundo-parede);
     font-family: var(--estilo-fonte-padrao);
     font-weight: var(--destaque-normal);
     letter-spacing: .5px;
 }
 
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Quadro Principal
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #quadro {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     overflow: auto;
     margin: 3dvh auto;
-    padding: 0 9px;
+    padding: 0;
     height: 94dvh;
-    width: 86vw;
+    width: 94vw;
     background-color: var(--fundo-quadro-padrao);
-    border: 1vw solid var(--fundo-transparente);
+    border: min(1vw, 1vh) solid var(--fundo-transparente);
     background-image: var(--radial-padrao);
     border-image-source: var(--url-borda-imagem);
     border-image-slice: 27 27 27 27;
-    border-image-width: 1vw;
+    border-image-width: min(1vw, 1vh);
     border-image-outset: 0;
     border-image-repeat: round round;
-    box-shadow: 0 0 1vw rgba(0, 0, 0, 1);
+    box-shadow: var(--sombra-box-padrao);
     transition: var(--transicao-padrao);
 }
 
-section {
-    margin: 1rem 0;
-}
-
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Seções do site
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-#menu {
-    width: 100%;
-    border-bottom: .2rem ridge var(--texto-cor-destaque);
-}
-
-#secoes {
-    padding: 2rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    list-style: none;
-}
-
-.menu-item {
-    transition: var(--transicao-menu);
-}
-
-.menu-item a {
-    padding: .8rem;
-    position: relative;
-    text-decoration: none;
-    color: var(--texto-cor-padrao);
-    font-style: var(--estilo-fonte-titulo);
-    font-size: var(--fonte-titulo);
-    text-shadow: var(--texto-sombra-padrao);
-    transition: var(--transicao-menu);
-}
-
-.menu-item a:hover,
-.menu-item a:focus {
-    color: var(--texto-cor-destaque);
-    text-shadow: var(--texto-sombra-padrao);
-}
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Efeito no link do menu
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-.menu-item a::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 0%;
-    width: .2rem;
-    background: var(--link-efeito);
-    transition: var(--transicao-padrao);
-}
-
-.menu-item a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: .2rem;
-    background: var(--link-efeito);
-    transition: var(--transicao-padrao);
-}
-
-.menu-item a:hover::after,
-.menu-item a:focus::after {
-    width: 100%;
-}
-
-.menu-item a:hover::before,
-.menu-item a:focus::before {
-    height: 90%;
-}
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Efeito mudança de seção
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fade-out {
-    100% {
-        opacity: 0;
-    }
-
-    0% {
-        opacity: 1;
-    }
-}
-
-@keyframes slide-up {
-    0% {
-        transform: translateY(100%);
-    }
-
-    100% {
-        transform: translateY(0%);
-    }
-}
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Wrapper geral
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-.wrapper-descricao {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    list-style: inside;
-    padding: var(--espaco-padrao);
-    background-color: var(--fundo-transparente);
-    border: var(--fundo-transparente);
-}
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Destaques
+    Texto em Destaque
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .destaque {
     color: var(--texto-cor-destaque);
@@ -256,16 +134,72 @@ section {
     text-shadow: var(--texto-sombra-padrao);
 }
 
+
+#infos, #sites {
+    max-width: 94%;
+}
+#contatos {
+    max-width: 98%;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Menu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+header, .navbar-brand, .nav-link, .dropdown-menu {
+    transition: var(--transicao-menu);
+}
+header, .navbar {
+    border-radius: var(--borda-menu);
+}
+
+header {
+    width: 100%;
+    margin-bottom: var(--espaco-padrao);
+    box-shadow: var(--sombra-box-padrao);
+}
+header:hover {
+    box-shadow: var(--sombra-box-expand);
+}
+
+.navbar-brand {
+    color: var(--texto-cor-padrao);
+    font-size: var(--fonte-subtitulo);
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: var(--texto-cor-destaque);
+}
+
+.navbar-nav {
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.dropdown-menu {
+    max-height: 40vh;
+    overflow-y: auto;
+    background-color: rgb(235, 235, 235);
+}
+.dropdown-menu:hover {
+    background-color: rgb(215, 215, 215);
+}
+
+.dropdown-item {
+    border-radius: .5rem;
+}
+.dropdown-item:hover {
+    color: var(--texto-cor-destaque);
+}
+
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Apresentação de conhecimentos
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #infos {
     display: var(--display-infos);
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: var(--espaco-padrao);
-    width: 100%;
+    padding: var(--espaco-sessoes);
     background-color: var(--fundo-sessao);
     border: var(--borda-padrao);
     border-radius: .5rem;
@@ -273,17 +207,14 @@ section {
     box-shadow: var(--sombra-box-padrao);
     transition: var(--transicao-padrao);
 }
-
 #infos:hover {
     box-shadow: var(--sombra-box-expand);
 }
 
-#apresentacao-geral {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: var(--espaco-padrao);
+h2 {
+    color: var(--texto-cor-destaque);
+    font-size: var(--fonte-subtitulo);
+    font-weight: bold;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -300,7 +231,6 @@ section {
     box-shadow: 0 0 .5vw rgba(0, 0, 0, .8);
     transition: var(--transicao-padrao);
 }
-
 #foto-perfil:hover {
     box-shadow: 0 0 1vw rgba(0, 0, 0, 1);
     transform: scale(1.1);
@@ -315,54 +245,16 @@ section {
     transition: var(--transicao-padrao);
 }
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Apresentação Perfil
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-#geral {
-    width: 70%;
-}
-
-#texto-geral {
-    padding: var(--espaco-padrao);
-    line-height: 1.6;
-}
-
-#apresentacao-dev {
-    display: flex;
-    flex-direction: column;
-}
-
-.topico {
-    display: flex;
-    text-align: center;
-    font-family: var(--estilo-fonte-titulo);
-    font-size: var(--fonte-titulo);
-    color: var(--texto-cor-destaque);
-    text-shadow: var(--texto-sombra-padrao);
-    border-top: .2rem ridge var(--texto-cor-destaque);
-    border-bottom: .2rem ridge var(--texto-cor-destaque);
-}
-
-.subTopico {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: var(--espaco-padrao);
-}
-
-.detalhes li {
-    font-size: var(--fonte-subtitulo);
-    text-shadow: var(--texto-sombra-padrao);
-}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Apresentação dos sites com demonstração de tecnologia dominada
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #sites {
     display: var(--display-sites);
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: var(--espaco-padrao) auto;
     padding: var(--espaco-sessoes);
     background-color: var(--fundo-sessao);
     box-shadow: var(--sombra-box-padrao);
@@ -371,25 +263,23 @@ section {
     text-shadow: var(--texto-sombra-padrao);
     transition: var(--transicao-padrao);
 }
-
 #sites:hover {
     box-shadow: var(--sombra-box-expand);
 }
 
-#sites-preview {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+.arrow {
+    transition: var(--transicao-padrao);
+}
+
+.arrow:hover {
+    cursor: pointer;
+    filter: var(--sombra-especial);
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Preview versão Desktop
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .site-desktop {
-    display: flex;
-    margin: auto .5vw;
-
     background-image: var(--url-tarefas-desktop);
     background-size: 7.55em 4.3em;
     background-repeat: no-repeat;
@@ -411,10 +301,6 @@ section {
     Preview versão Mobile
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #site-mobile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     background-image: var(--url-tarefas-mobile);
     background-size: 4.1em 8.64em;
     background-repeat: no-repeat;
@@ -422,7 +308,6 @@ section {
 }
 
 .phone {
-    margin: auto .5vw;
     height: 9.1em;
     width: 4.6em;
     filter: var(--sombra-especial);
@@ -451,12 +336,9 @@ section {
     Contatos e Download
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 #contatos {
-    display: flex;
-    justify-content: space-evenly;
     align-items: center;
     margin-bottom: var(--espaco-padrao);
-    padding: var(--espaco-padrao);
-    width: 100%;
+    padding: var(--espaco-sessoes);
     background-color: var(--fundo-sessao);
     box-shadow: var(--sombra-box-padrao);
     border-radius: .5rem;

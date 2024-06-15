@@ -2,16 +2,15 @@
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /* Estilos para telas entre 992px e 1200px */
-@media screen and (max-width: 1200px) {
+/*@media screen and (max-width: 1200px) {
 
     #secoes {
         margin: auto 1.4rem;
-        justify-content: space-between;
     }
 }
 
 /* Estilos para telas entre 768px e 991px */
-@media screen and (max-width: 991px) {
+/*@media screen and (max-width: 991px) {
 
     .menu-item a {
         font-size: 2.4rem;
@@ -35,14 +34,14 @@
 }
 
 /* Estilos para telas entre 600px e 767px */
-@media screen and (max-width: 767px) {
+/*@media screen and (max-width: 767px) {
     #apresentacao-geral {
         flex-direction: column;
     }
 }
 
 /* Estilos para telas menores que 600px */
-@media screen and (max-width: 600px) {
+/*@media screen and (max-width: 600px) {
     .menu-item a {
         font-size: 1.8rem;
     }
@@ -69,7 +68,8 @@
 }
 
 /* Estilos para telas menores que 480px */
-@media screen and (max-width: 480px) {
+
+/*@media screen and (max-width: 480px) {
     #secoes {
         flex-direction: column;
     }
