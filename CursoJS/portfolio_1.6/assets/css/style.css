@@ -199,6 +199,7 @@ header:hover {
 #infos {
     display: var(--display-infos);
     flex-direction: column;
+    margin-top: var(--espaco-padrao);
     padding: var(--espaco-sessoes);
     background-color: var(--fundo-sessao);
     border: var(--borda-padrao);
